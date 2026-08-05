@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Column Inch Counsel — 36-press-broadsheet</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Libre+Caslon+Text:wght@400;600;700&family=Source+Serif+4:wght@400;600;700&display=swap" rel="stylesheet" />
+<style>
+
+:root{--bg:#f7f3ea;--fg:#17120e;--copper:#9a4e24;--c:1.1rem}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--bg);color:var(--fg);font-family:"Source Serif 4",serif}
+a{color:inherit;text-decoration:none}
+.mast{text-align:center;padding:1.1rem 1rem .7rem;border-bottom:3px double var(--fg)}
+.brand{font-family:"Libre Caslon Text",serif;font-size:clamp(1.8rem,5vw,2.6rem);font-weight:700}
+.deck{font-size:.68rem;letter-spacing:.16em;text-transform:uppercase;opacity:.55;margin-top:.35rem}
+.links{display:flex;justify-content:center;gap:1.2rem;margin-top:.6rem;font-size:.78rem}
+.links a.keep{font-weight:700;color:var(--copper)}
+@media(max-width:650px){.links a:not(.keep){display:none}}
+.sheet{max-width:1000px;margin:0 auto;padding:1.4rem 1rem 2rem;display:grid;grid-template-columns:2fr 1fr 1fr;gap:1.2rem;column-rule:1px solid color-mix(in srgb,var(--fg) 18%,transparent)}
+@media(max-width:850px){.sheet{grid-template-columns:1fr}}
+.lead h1{font-family:"Libre Caslon Text",serif;font-size:clamp(1.9rem,3.8vw,2.8rem);line-height:1.15}
+.kicker{font-size:.72rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--copper);margin-bottom:.45rem}
+.lede{margin-top:.9rem;line-height:1.65}
+.drop{float:left;font-family:"Libre Caslon Text",serif;font-size:4.2rem;line-height:.75;color:var(--copper);margin:.05rem .3rem 0 0;font-weight:700}
+.cta{display:inline-block;clear:both;margin-top:1.2rem;border:1.5px solid var(--copper);color:var(--copper);padding:.45rem .8rem;font-size:.82rem;font-weight:600}
+.col h2{font-family:"Libre Caslon Text",serif;font-size:1.05rem;margin-bottom:.45rem;border-bottom:1px solid color-mix(in srgb,var(--fg) 20%,transparent);padding-bottom:.35rem}
+.col p{font-size:.9rem;line-height:1.55;margin-bottom:.8rem}
+footer.contact{max-width:1000px;margin:0 auto;padding:1rem;border-top:1px solid color-mix(in srgb,var(--fg) 20%,transparent);font-size:.85rem;opacity:.7}
+
+</style>
+</head>
+<body>
+
+<header class="mast">
+  <div class="brand">Column Inch Counsel</div>
+  <p class="deck">Media · London · Late edition</p>
+  <nav class="links"><a href="#defamation">Defamation</a><a href="#privacy">Privacy</a><a class="keep" href="#contact">Send brief</a></nav>
+</header>
+<section class="sheet">
+  <article class="lead">
+    <p class="kicker">Front page counsel</p>
+    <h1>When the story is the liability.</h1>
+    <p class="lede"><span class="drop">N</span>ewsrooms don't need generic media lawyers. They need counsel who can smell a libel risk in a subeditor's cut.</p>
+    <a class="cta" href="#contact">Send a brief</a>
+  </article>
+  <div class="col" id="defamation"><h2>Defamation</h2><p>Pre-publication through courtroom — same desk.</p><p>Corrections negotiated without self-immolation.</p></div>
+  <div class="col" id="privacy"><h2>Privacy</h2><p>Public interest versus private life, argued without slogans.</p></div>
+</section>
+<footer class="contact" id="contact">Newsroom desk · briefs read the day they arrive</footer>
+
+</body>
+</html>

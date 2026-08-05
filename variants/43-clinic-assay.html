@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Assay Partners — 43-clinic-assay</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;500;600&family=Hind:wght@300;400;500;600&display=swap" rel="stylesheet" />
+<style>
+
+:root{--bg:#f7fafb;--fg:#102030;--teal:#1f6f80;--u:1rem}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--bg);color:var(--fg);font-family:Hind,sans-serif}
+a{color:inherit;text-decoration:none}
+.nav{display:flex;justify-content:space-between;padding:1rem 1.3rem}
+.brand{font-family:"Josefin Sans",sans-serif;font-size:.85rem;letter-spacing:.1em;text-transform:uppercase}
+.nav a{font-size:.78rem;opacity:.6}.nav a.keep{opacity:1;color:var(--teal)}
+@media(max-width:700px){.nav a:not(.keep){display:none}}
+.hero{padding:2rem 1.3rem;max-width:860px}
+.tag{font-family:"Josefin Sans",sans-serif;font-size:.68rem;letter-spacing:.14em;text-transform:uppercase;color:var(--teal)}
+h1{font-family:"Josefin Sans",sans-serif;font-weight:300;font-size:clamp(2.1rem,4.5vw,3.3rem);line-height:1.15;margin-top:.65rem;max-width:16ch}
+.sub{margin-top:1rem;line-height:1.65;max-width:34rem}
+.cta{display:inline-block;margin-top:1.3rem;border-bottom:1px solid var(--teal);color:var(--teal);font-size:.85rem;padding-bottom:.15rem}
+.assay{padding:0 1.3rem 2rem;display:grid;gap:.9rem;max-width:860px}
+.row{display:grid;grid-template-columns:7rem 1fr;gap:1rem;align-items:center;font-size:.85rem}
+.bar{height:10px;background:color-mix(in srgb,var(--teal) 18%,transparent);position:relative}
+.bar i{display:block;height:100%;background:var(--teal)}
+.row span{font-family:"Josefin Sans",sans-serif;font-size:.68rem;letter-spacing:.08em;text-transform:uppercase;opacity:.7}
+
+</style>
+</head>
+<body>
+
+<header class="nav"><div class="brand">Assay Partners</div><nav><a href="#toxicity">Toxicity</a><a href="#claims">Claims</a><a class="keep" href="#contact">Run assay</a></nav></header>
+<section class="hero">
+  <p class="tag">Life sciences · Zurich</p>
+  <h1>Measure the exposure. Then file.</h1>
+  <p class="sub">Regulatory and commercial counsel that treats legal risk like an assay — quantified, gated, documented.</p>
+  <a class="cta" href="#contact">Run a legal assay</a>
+</section>
+<section class="assay">
+  <div class="row" id="toxicity"><span>Toxicity</span><div class="bar"><i style="width:72%"></i></div></div>
+  <div class="row" id="claims"><span>Claims</span><div class="bar"><i style="width:48%"></i></div></div>
+  <div class="row" id="contact"><span>Intake</span><div class="bar"><i style="width:90%"></i></div></div>
+</section>
+
+</body>
+</html>

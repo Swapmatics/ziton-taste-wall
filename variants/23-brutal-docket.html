@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Lane & Coil — 23-brutal-docket</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Archivo+Black:wght@400;600;700&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet" />
+<style>
+
+:root{--bg:#f7f6f1;--fg:#0d0d0d;--red:#e10600;--g:1.15rem}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--bg);color:var(--fg);font-family:"Source Sans 3",sans-serif}
+a{color:inherit;text-decoration:none}
+.head{display:flex;justify-content:space-between;align-items:baseline;padding:1rem 1.3rem;border-bottom:2px solid var(--fg)}
+.brand{font-weight:700}
+.head a{font-size:.75rem;font-weight:700;text-transform:uppercase;border-bottom:2px solid var(--red)}
+.wrap{display:grid;grid-template-columns:140px 1fr;min-height:70vh}
+@media(max-width:720px){.wrap{grid-template-columns:1fr}}
+.docket{border-right:2px solid var(--fg);padding:1rem .7rem;font-family:ui-monospace,monospace;font-size:.68rem;line-height:1.9;opacity:.7}
+@media(max-width:720px){.docket{border-right:0;border-bottom:2px solid var(--fg);display:flex;gap:1rem;flex-wrap:wrap;line-height:1.3}}
+.main{padding:2rem 1.4rem;display:flex;flex-direction:column;justify-content:center}
+.tag{font-size:.7rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--red)}
+h1{font-family:"Archivo Black",sans-serif;font-weight:400;font-size:clamp(3rem,10vw,7rem);text-transform:uppercase;line-height:.9;letter-spacing:-.03em;margin-top:.6rem;max-width:8ch}
+.sub{margin-top:1.1rem;max-width:34rem;line-height:1.55;font-size:1.05rem}
+.cta{margin-top:1.5rem;align-self:flex-start;background:var(--red);color:#fff;font-weight:700;padding:.85rem 1.15rem;text-transform:uppercase;font-size:.8rem}
+footer.contact{padding:1.1rem 1.3rem;border-top:2px solid var(--fg);display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap;font-size:.85rem}
+
+</style>
+</head>
+<body>
+
+<header class="head"><div class="brand">Lane & Coil</div><a href="#contact">Open docket</a></header>
+<div class="wrap">
+  <aside class="docket" aria-label="Sample docket numbers">
+    <div>CV-24-1184</div><div>CV-24-2091</div><div>CV-25-0042</div><div>CV-25-0317</div><div>CV-25-0888</div>
+  </aside>
+  <section class="main">
+    <p class="tag">Plaintiff · Phoenix</p>
+    <h1>Liable.</h1>
+    <p class="sub">We don't decorate negligence. We name it, prove it, and put it in front of a jury.</p>
+    <a class="cta" href="#contact">Start intake</a>
+  </section>
+</div>
+<footer class="contact" id="contact"><span>Trial counsel · high-stakes negligence</span><span>Partner line · same day response</span></footer>
+
+</body>
+</html>

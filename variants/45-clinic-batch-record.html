@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Batch Record LLP — 45-clinic-batch-record</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;500;600;700&family=IBM+Plex+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+<style>
+
+:root{--bg:#f2f5f7;--fg:#13212b;--teal:#236f7e;--u:1rem}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--bg);color:var(--fg);font-family:"IBM Plex Sans",sans-serif}
+a{color:inherit;text-decoration:none}
+.nav{display:flex;justify-content:space-between;padding:1rem 1.2rem;border-bottom:1px solid color-mix(in srgb,var(--fg) 12%,transparent)}
+.brand{font-family:"Josefin Sans",sans-serif;font-size:.8rem;letter-spacing:.1em;text-transform:uppercase;font-weight:500}
+.nav a{font-size:.75rem;opacity:.6}.nav a.keep{opacity:1;color:var(--teal)}
+@media(max-width:700px){.nav a:not(.keep){display:none}}
+.hero{padding:2rem 1.2rem;max-width:880px}
+.tag{font-family:"Josefin Sans",sans-serif;font-size:.68rem;letter-spacing:.14em;text-transform:uppercase;color:var(--teal)}
+h1{font-family:"Josefin Sans",sans-serif;font-weight:300;font-size:clamp(2rem,4.2vw,3.1rem);line-height:1.15;margin-top:.6rem;max-width:16ch}
+.sub{margin-top:1rem;line-height:1.65;max-width:36rem}
+.cta{display:inline-block;margin-top:1.2rem;border:1px solid var(--teal);padding:.5rem .85rem;font-size:.75rem;letter-spacing:.06em;text-transform:uppercase;color:var(--teal)}
+table{width:100%;border-collapse:collapse;font-size:.85rem;font-variant-numeric:tabular-nums}
+th,td{text-align:left;padding:.85rem 1.2rem;border-top:1px solid color-mix(in srgb,var(--fg) 12%,transparent)}
+th{font-family:"Josefin Sans",sans-serif;font-size:.68rem;letter-spacing:.1em;text-transform:uppercase;color:var(--teal);font-weight:500}
+
+</style>
+</head>
+<body>
+
+<header class="nav"><div class="brand">Batch Record LLP</div><nav><a href="#gmp">GMP</a><a href="#release">Release</a><a class="keep" href="#contact">Record</a></nav></header>
+<section class="hero">
+  <p class="tag">Life sciences · manufacturing counsel</p>
+  <h1>If it isn't in the batch record, it didn't happen.</h1>
+  <p class="sub">GMP-aware regulatory counsel for companies whose paper trail is the product of record.</p>
+  <a class="cta" href="#contact">Open a batch review</a>
+</section>
+<table>
+  <thead><tr><th scope="col">Step</th><th scope="col">Control</th><th scope="col">Owner</th></tr></thead>
+  <tbody>
+    <tr id="gmp"><td>Deviation</td><td>Documented</td><td>QA / counsel</td></tr>
+    <tr id="release"><td>Release</td><td>Gate check</td><td>Qualified person</td></tr>
+    <tr id="contact"><td>Intake</td><td>Open</td><td>Partner desk</td></tr>
+  </tbody>
+</table>
+
+</body>
+</html>

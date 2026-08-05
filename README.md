@@ -1,14 +1,18 @@
-# Ziton Taste Wall — Luxury Law (batch 2.1)
+# Ziton Taste Wall — Luxury Law (batch 3)
 
-Structural dialects — not skins. Plain static HTML/CSS. No JavaScript. No shared placeholder images.
+Structural branches from batch-2 winners. Plain static HTML/CSS. No JavaScript. No placeholder images.
 
-## Review links
+## Links
 
-- **Live:** https://swapmatics.github.io/ziton-taste-wall/index.html
-- **Source:** this repo
+- **Live:** https://swapmatics.github.io/ziton-taste-wall/
+- **Source:** this repo (`variants/21–45.html` + batch-2 seeds)
 
-## Curator shortlist
+## Families
 
-Lead: **09, 11, 14, 16, 17**. Strong second: **01, 19**. Quiet competence: **05, 08, 13**.
-
-Batch 2.1: landmark `id`s on section/footer hosts; `07` is an intentional slow-reveal (cue in hero → gold band CTA).
+| Seed | Branches |
+|------|----------|
+| 09 brutal | 21–25 |
+| 11 ledger | 26–30 |
+| 14 dock | 31–35 |
+| 16 press | 36–40 |
+| 17 clinic | 41–45 |

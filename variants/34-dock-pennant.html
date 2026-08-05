@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Pennant Maritime — 34-dock-pennant</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue:wght@400;500;700&family=Barlow:wght@400;500;700&display=swap" rel="stylesheet" />
+<style>
+
+:root{--bg:#e6e9ed;--fg:#12161c;--a:#1f4e79;--b:#c0392b;--c:#f1c40f;--u:1rem}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--bg);color:var(--fg);font-family:Barlow,sans-serif}
+a{color:inherit;text-decoration:none}
+.nav{display:flex;justify-content:space-between;padding:1rem 5vw}
+.brand{font-family:"Bebas Neue",sans-serif;font-size:1.5rem;letter-spacing:.04em}
+.nav a{font-size:.8rem;font-weight:700;text-transform:uppercase}.nav a.keep{border-bottom:2px solid var(--a)}
+@media(max-width:700px){.nav a:not(.keep){display:none}}
+.grid{display:grid;grid-template-columns:1.2fr .8fr;gap:1rem;padding:0 5vw 2rem;align-items:center;min-height:68vh}
+@media(max-width:900px){.grid{grid-template-columns:1fr}}
+.tag{font-size:.75rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;opacity:.6}
+h1{font-family:"Bebas Neue",sans-serif;font-weight:400;font-size:clamp(2.8rem,7vw,5.2rem);line-height:.95;text-transform:uppercase;margin-top:.4rem;max-width:12ch}
+.sub{margin-top:.9rem;max-width:32rem;line-height:1.45;font-size:1.05rem}
+.cta{display:inline-block;margin-top:1.3rem;background:var(--a);color:#fff;font-weight:700;text-transform:uppercase;padding:.7rem 1rem;font-size:.85rem}
+.flags{display:grid;grid-template-columns:1fr 1fr;gap:.6rem;min-height:320px}
+.flags i{display:block;min-height:100px}
+.flags i:nth-child(1){background:var(--a)}
+.flags i:nth-child(2){background:var(--b)}
+.flags i:nth-child(3){background:var(--c)}
+.flags i:nth-child(4){background:var(--fg)}
+footer.contact{padding:1.1rem 5vw;border-top:1px solid color-mix(in srgb,var(--fg) 18%,transparent);font-size:.88rem;opacity:.75}
+
+</style>
+</head>
+<body>
+
+<header class="nav"><div class="brand">Pennant Maritime</div><nav><a href="#signals">Signals</a><a href="#casualty">Casualty</a><a class="keep" href="#contact">Desk</a></nav></header>
+<section class="grid">
+  <div>
+    <p class="tag">Shipping · Cape Town</p>
+    <h1>Signal clearly. Then enforce.</h1>
+    <p class="sub">Maritime counsel that communicates like the bridge — short, unmistakable, binding.</p>
+    <a class="cta" href="#contact">Hoist a matter</a>
+  </div>
+  <div class="flags" id="signals" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
+</section>
+<footer class="contact" id="contact"><span id="casualty">Casualty notice</span> · Partner desk · same tide when urgent</footer>
+
+</body>
+</html>
