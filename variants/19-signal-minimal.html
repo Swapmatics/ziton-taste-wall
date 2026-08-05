@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Orbit Counsel — Taste wall 19-signal-minimal</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Exo+2|Orbitron:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<style>
+:root {
+  --bg: #07090f;
+  --fg: #e6eaf2;
+  --accent: #6cf0c2;
+  --display: "Orbitron", Georgia, serif;
+  --body: "Exo 2", system-ui, sans-serif;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html, body { min-height: 100%; background: var(--bg); color: var(--fg); font-family: var(--body); }
+a { color: inherit; text-decoration: none; }
+.brand { font-family: var(--display); letter-spacing: 0.02em; }
+h1 { font-family: var(--display); font-weight: 500; line-height: 1.05; }
+.sub { opacity: 0.78; max-width: 36rem; line-height: 1.55; }
+.cta {
+  display: inline-flex; align-items: center; gap: 0.6rem;
+  margin-top: 1.75rem; padding: 0.9rem 1.35rem;
+  border: 1px solid color-mix(in srgb, var(--fg) 35%, transparent);
+  font-size: 0.85rem; letter-spacing: 0.06em; text-transform: uppercase;
+  transition: background 0.25s, color 0.25s;
+}
+.cta:hover { background: var(--fg); color: var(--bg); }
+.tag { font-size: 0.72rem; letter-spacing: 0.18em; text-transform: uppercase; opacity: 0.55; }
+nav {
+  display: flex; justify-content: space-between; align-items: baseline;
+  padding: 1.4rem 2rem; position: relative; z-index: 2;
+}
+nav ul { display: flex; gap: 1.5rem; list-style: none; font-size: 0.8rem; opacity: 0.7; }
+@media (max-width: 720px) { nav ul { display: none; } }
+
+.hero { min-height: 100vh; padding: 0 6vw; display: flex; flex-direction: column; justify-content: center;
+  background: radial-gradient(circle at 50% 120%, color-mix(in srgb, var(--accent) 15%, transparent), transparent 40%), var(--bg); }
+h1 { font-size: clamp(2.4rem, 5vw, 4.2rem); max-width: 12ch; letter-spacing: 0.04em; text-transform: uppercase; }
+.orbit-ring { width: 120px; height: 120px; border: 1px solid color-mix(in srgb, var(--accent) 50%, transparent); border-radius: 50%; margin-bottom: 2rem; position: relative; }
+.orbit-ring::after { content: ""; position: absolute; width: 8px; height: 8px; background: var(--accent); border-radius: 50%; top: -4px; left: 50%; }
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="brand">Orbit Counsel</div>
+  <ul><li>Work</li><li>People</li><li>Insights</li><li>Contact</li></ul>
+</nav>
+<section class="hero">
+  <div class="orbit-ring" aria-hidden="true"></div>
+  <p class="tag">Space / sats · Denver</p>
+  <h1 style="margin-top:0.8rem">Orbit is jurisdiction.</h1>
+  <p class="sub" style="margin-top:1.2rem">Spectrum, licensing, and commercial space agreements.</p>
+  <a class="cta" href="#">Open mission counsel</a>
+</section>
+</body>
+</html>

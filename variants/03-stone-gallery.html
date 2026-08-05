@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Meridian Hale — Taste wall 03-stone-gallery</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Karla|Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<style>
+:root {
+  --bg: #e8e4dc;
+  --fg: #22201c;
+  --accent: #6b5845;
+  --display: "Playfair Display", Georgia, serif;
+  --body: "Karla", system-ui, sans-serif;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html, body { min-height: 100%; background: var(--bg); color: var(--fg); font-family: var(--body); }
+a { color: inherit; text-decoration: none; }
+.brand { font-family: var(--display); letter-spacing: 0.02em; }
+h1 { font-family: var(--display); font-weight: 500; line-height: 1.05; }
+.sub { opacity: 0.78; max-width: 36rem; line-height: 1.55; }
+.cta {
+  display: inline-flex; align-items: center; gap: 0.6rem;
+  margin-top: 1.75rem; padding: 0.9rem 1.35rem;
+  border: 1px solid color-mix(in srgb, var(--fg) 35%, transparent);
+  font-size: 0.85rem; letter-spacing: 0.06em; text-transform: uppercase;
+  transition: background 0.25s, color 0.25s;
+}
+.cta:hover { background: var(--fg); color: var(--bg); }
+.tag { font-size: 0.72rem; letter-spacing: 0.18em; text-transform: uppercase; opacity: 0.55; }
+nav {
+  display: flex; justify-content: space-between; align-items: baseline;
+  padding: 1.4rem 2rem; position: relative; z-index: 2;
+}
+nav ul { display: flex; gap: 1.5rem; list-style: none; font-size: 0.8rem; opacity: 0.7; }
+@media (max-width: 720px) { nav ul { display: none; } }
+
+.hero { min-height: 100vh; padding: 0 6vw 8vh; display: grid; align-content: end; gap: 1rem;
+  background: linear-gradient(to top, var(--bg) 0%, transparent 45%),
+  linear-gradient(135deg, #cfc8ba, #9a9183 40%, #6e6558); }
+h1 { font-size: clamp(2.8rem, 6vw, 5rem); max-width: 16ch; }
+.frame { position: absolute; top: 18%; right: 8%; width: min(38vw, 420px); aspect-ratio: 3/4;
+  border: 1px solid color-mix(in srgb, var(--fg) 25%, transparent); background: color-mix(in srgb, var(--bg) 30%, transparent); }
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="brand">Meridian Hale</div>
+  <ul><li>Work</li><li>People</li><li>Insights</li><li>Contact</li></ul>
+</nav>
+<div class="frame" aria-hidden="true"></div>
+<section class="hero">
+  <p class="tag">Disputes · Chicago</p>
+  <h1>When the room needs composure.</h1>
+  <p class="sub">Complex commercial disputes handled with discipline and calm.</p>
+  <a class="cta" href="#">Schedule a consultation</a>
+</section>
+</body>
+</html>
