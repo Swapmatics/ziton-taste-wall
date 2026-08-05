@@ -1,16 +1,14 @@
-# Ziton Taste Wall — Luxury Law (batch 2)
+# Ziton Taste Wall — Luxury Law (batch 2.1)
 
 Structural dialects — not skins. Plain static HTML/CSS. No JavaScript. No shared placeholder images.
 
 ## Review links
 
-- **Live (GitHub Pages):** https://swapmatics.github.io/ziton-taste-wall/index.html
-- **Source:** this repo — `index.html`, `variants/*.html`
+- **Live:** https://swapmatics.github.io/ziton-taste-wall/index.html
+- **Source:** this repo
 
-## Batch 2 acceptance
+## Curator shortlist
 
-- Structure varies (grid, type scale, CTA, nav) — not just color/font
-- No placeholder/debug heroes
-- Spacing owned per dialect
-- Second section past the fold
-- Mobile nav has a replacement when links collapse
+Lead: **09, 11, 14, 16, 17**. Strong second: **01, 19**. Quiet competence: **05, 08, 13**.
+
+Batch 2.1: landmark `id`s on section/footer hosts; `07` is an intentional slow-reveal (cue in hero → gold band CTA).
