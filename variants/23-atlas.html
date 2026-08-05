@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="Cache-Control" content="no-cache" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Meridian Atlas Law — 23-atlas</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;600;700&family=Nunito+Sans:wght@400;600;700&display=swap" rel="stylesheet" />
+<style>
+
+:root{--bg:#eef1e8;--fg:#1a2218;--ink:#2f4a3a;--u:1.1rem}
+*{box-sizing:border-box;margin:0;padding:0}body{background:var(--bg);color:var(--fg);font-family:"Nunito Sans",sans-serif}
+a{color:inherit;text-decoration:none}
+.nav{display:flex;justify-content:space-between;padding:1rem 1.3rem;border-bottom:1px dashed color-mix(in srgb,var(--ink) 35%,transparent)}
+.brand{font-family:"Libre Baskerville",serif;font-size:1.1rem}.nav a{font-size:.75rem;opacity:.6}.nav a.keep{opacity:1}
+@media(max-width:700px){.nav a:not(.keep){display:none}}
+.spread{display:grid;grid-template-columns:4.5rem 1fr;min-height:70vh}
+.coords{writing-mode:vertical-rl;transform:rotate(180deg);padding:1rem 0;font-size:.65rem;letter-spacing:.14em;text-transform:uppercase;opacity:.45;border-right:1px dashed color-mix(in srgb,var(--ink) 35%,transparent);text-align:center}
+@media(max-width:700px){.spread{grid-template-columns:1fr}.coords{writing-mode:horizontal-tb;transform:none;border-right:0;border-bottom:1px dashed color-mix(in srgb,var(--ink) 35%,transparent)}}
+.main{padding:2.5rem 1.5rem;display:flex;flex-direction:column;justify-content:center}
+.tag{font-size:.7rem;letter-spacing:.14em;text-transform:uppercase;color:var(--ink)}
+h1{font-family:"Libre Baskerville",serif;font-size:clamp(2.1rem,4.5vw,3.4rem);line-height:1.15;margin-top:.7rem;max-width:14ch}
+.sub{margin-top:1rem;line-height:1.65;max-width:32rem}
+.cta{margin-top:1.4rem;align-self:flex-start;border:1px solid var(--ink);padding:.55rem .95rem;font-size:.8rem;color:var(--ink)}
+.regions{display:grid;grid-template-columns:1fr 1fr 1fr;gap:1px;background:color-mix(in srgb,var(--ink) 20%,transparent);margin-top:2rem}
+.regions div{background:var(--bg);padding:1rem;font-size:.85rem}
+.regions strong{display:block;font-family:"Libre Baskerville",serif;margin-bottom:.3rem}
+@media(max-width:700px){.regions{grid-template-columns:1fr}}
+
+</style>
+</head>
+<body>
+
+<header class="nav"><div class="brand">Meridian Atlas Law</div><nav><a href="#regions">Regions</a><a class="keep" href="#contact">Plot a matter</a></nav></header>
+<section class="spread">
+  <aside class="coords">40°N · 74°W · Cross-border</aside>
+  <div class="main">
+    <p class="tag">International · New York</p>
+    <h1>Jurisdiction is a map, not a mood.</h1>
+    <p class="sub">Cross-border disputes for parties who need the coordinates drawn before the first motion.</p>
+    <a class="cta" href="#contact">Plot a matter</a>
+    <div class="regions" id="regions">
+      <div><strong>Seat</strong>Where the fight lives</div>
+      <div><strong>Treaty</strong>What still binds</div>
+      <div id="contact"><strong>Intake</strong>Atlas desk · partner</div>
+    </div>
+  </div>
+</section>
+
+</body>
+</html>

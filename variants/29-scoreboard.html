@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="Cache-Control" content="no-cache" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Clockside LLP — 29-scoreboard</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Barlow:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<style>
+
+:root{--bg:#0e1a12;--fg:#e8f5e9;--led:#39ff14;--u:1rem}
+*{box-sizing:border-box;margin:0;padding:0}body{background:var(--bg);color:var(--fg);font-family:Barlow,sans-serif}
+a{color:inherit;text-decoration:none}
+.nav{display:flex;justify-content:space-between;padding:1rem 1.2rem;border-bottom:2px solid color-mix(in srgb,var(--led) 35%,transparent)}
+.brand{font-family:Oswald,sans-serif;letter-spacing:.06em;text-transform:uppercase}.nav a{font-size:.75rem;opacity:.65}.nav a.keep{opacity:1;color:var(--led)}
+@media(max-width:700px){.nav a:not(.keep){display:none}}
+.board{padding:2rem 1.2rem;text-align:center}
+.clock{font-family:Oswald,sans-serif;font-size:clamp(3rem,12vw,7rem);color:var(--led);letter-spacing:.08em;font-variant-numeric:tabular-nums;line-height:1}
+.period{font-size:.75rem;letter-spacing:.2em;text-transform:uppercase;opacity:.6;margin-top:.5rem}
+h1{font-family:Oswald,sans-serif;font-weight:500;font-size:clamp(1.8rem,4vw,2.8rem);text-transform:uppercase;letter-spacing:.04em;margin-top:1.5rem;max-width:16ch;margin-left:auto;margin-right:auto;line-height:1.15}
+.sub{margin-top:1rem;max-width:34rem;margin-left:auto;margin-right:auto;line-height:1.55;opacity:.8}
+.cta{display:inline-block;margin-top:1.4rem;background:var(--led);color:var(--bg);font-weight:700;padding:.7rem 1.1rem;text-transform:uppercase;font-size:.8rem;letter-spacing:.06em}
+.quarters{display:grid;grid-template-columns:repeat(4,1fr);border-top:2px solid color-mix(in srgb,var(--led) 35%,transparent);margin-top:2rem}
+.quarters div{padding:1rem;border-right:1px solid color-mix(in srgb,var(--led) 20%,transparent);font-size:.8rem}
+.quarters div:last-child{border-right:0}
+.quarters strong{display:block;font-family:Oswald,sans-serif;color:var(--led);font-size:1.2rem;margin-bottom:.25rem}
+@media(max-width:700px){.quarters{grid-template-columns:1fr 1fr}}
+
+</style>
+</head>
+<body>
+
+<header class="nav"><div class="brand">Clockside LLP</div><nav><a href="#q">Quarters</a><a class="keep" href="#contact">Timeout</a></nav></header>
+<section class="board">
+  <div class="clock" aria-label="Trial clock metaphor">14:22</div>
+  <p class="period">Q3 · Trial calendar · Atlanta</p>
+  <h1>Clock management is advocacy.</h1>
+  <p class="sub">Trial counsel for teams that treat time as a scored resource — every minute attributable.</p>
+  <a class="cta" href="#contact">Call a timeout</a>
+</section>
+<section class="quarters" id="q">
+  <div><strong>Q1</strong>Theme</div>
+  <div><strong>Q2</strong>Proof</div>
+  <div><strong>Q3</strong>Pressure</div>
+  <div id="contact"><strong>OT</strong>Intake open</div>
+</section>
+
+</body>
+</html>

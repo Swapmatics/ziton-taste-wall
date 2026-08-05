@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="Cache-Control" content="no-cache" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Dewey Disputes — 30-catalog-card</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;600;700&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet" />
+<style>
+
+:root{--bg:#d9d0c1;--card:#f7f1e4;--fg:#2a241c;--u:1.15rem}
+*{box-sizing:border-box;margin:0;padding:0}body{background:var(--bg);color:var(--fg);font-family:"Source Sans 3",sans-serif}
+a{color:inherit;text-decoration:none}
+.nav{display:flex;justify-content:space-between;padding:1rem 1.3rem;font-size:.78rem}
+.brand{font-family:"Libre Baskerville",serif;font-weight:700}.nav a{opacity:.6}.nav a.keep{opacity:1;border-bottom:1px solid var(--fg)}
+@media(max-width:600px){.nav a:not(.keep){display:none}}
+.drawer{max-width:560px;margin:2rem auto;padding:0 1.2rem}
+.card{background:var(--card);border:1px solid #b5aa98;padding:1.6rem 1.4rem;min-height:280px;box-shadow:0 8px 0 -4px #c4b9a6,0 16px 0 -8px #b8ad9b;position:relative}
+.hole{position:absolute;top:1rem;right:1rem;width:14px;height:14px;border-radius:50%;border:1px solid #b5aa98}
+.num{font-size:.7rem;letter-spacing:.12em;text-transform:uppercase;opacity:.55}
+h1{font-family:"Libre Baskerville",serif;font-size:clamp(1.6rem,3.5vw,2.2rem);line-height:1.3;margin-top:.8rem}
+.sub{margin-top:1rem;line-height:1.6;font-size:.95rem}
+.cta{display:inline-block;margin-top:1.3rem;font-size:.82rem;font-weight:600;border-bottom:1px solid var(--fg)}
+footer.contact{max-width:560px;margin:0 auto;padding:1.5rem 1.2rem;font-size:.85rem;opacity:.65}
+
+</style>
+</head>
+<body>
+
+<header class="nav"><div class="brand">Dewey Disputes</div><nav><a href="#stacks">Stacks</a><a class="keep" href="#contact">File a card</a></nav></header>
+<section class="drawer">
+  <div class="card">
+    <div class="hole" aria-hidden="true"></div>
+    <p class="num">KF · Knowledge disputes · Boston</p>
+    <h1>Find the controlling card.</h1>
+    <p class="sub">Research-grade appellate and brief work for lawyers who still believe a file has a spine.</p>
+    <a class="cta" href="#contact">Request a pull</a>
+  </div>
+</section>
+<footer class="contact" id="contact"><span id="stacks">Stacks open</span> · partner citation desk</footer>
+
+</body>
+</html>

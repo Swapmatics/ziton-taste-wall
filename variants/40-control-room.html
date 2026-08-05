@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="Cache-Control" content="no-cache" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Console Counsel — 40-control-room</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600;700&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<style>
+
+:root{--bg:#101418;--fg:#dce3ea;--ok:#3ddc97;--warn:#f0c gener;--u:1rem}
+:root{--warn:#f0c84a}
+*{box-sizing:border-box;margin:0;padding:0}body{background:var(--bg);color:var(--fg);font-family:"IBM Plex Sans",sans-serif}
+a{color:inherit;text-decoration:none}
+.nav{display:flex;justify-content:space-between;padding:.9rem 1rem;border-bottom:1px solid #2a3138;font-family:"IBM Plex Mono",monospace;font-size:.72rem}
+.brand{color:var(--ok)}.nav a{opacity:.55}.nav a.keep{opacity:1;color:var(--warn)}
+@media(max-width:700px){.nav a:not(.keep){display:none}}
+.grid{display:grid;grid-template-columns:1.4fr 1fr;grid-template-rows:auto auto;gap:1px;background:#2a3138;min-height:75vh}
+.panel{background:var(--bg);padding:1.3rem}
+.panel.hero h1{font-size:clamp(1.8rem,4vw,2.8rem);font-weight:500;line-height:1.15;max-width:16ch}
+.panel .tag{font-family:"IBM Plex Mono",monospace;font-size:.68rem;color:var(--ok);margin-bottom:.7rem}
+.sub{margin-top:.9rem;line-height:1.55;opacity:.75}
+.cta{display:inline-block;margin-top:1.2rem;font-family:"IBM Plex Mono",monospace;font-size:.72rem;border:1px solid var(--ok);color:var(--ok);padding:.55rem .8rem}
+.panel h2{font-family:"IBM Plex Mono",monospace;font-size:.7rem;letter-spacing:.08em;text-transform:uppercase;color:var(--warn);margin-bottom:.6rem}
+.panel ul{list-style:none;font-size:.85rem;line-height:1.7;opacity:.8}
+@media(max-width:800px){.grid{grid-template-columns:1fr}}
+
+</style>
+</head>
+<body>
+
+<header class="nav"><div class="brand">Console Counsel</div><nav><a href="#ops">OPS</a><a href="#alerts">ALERTS</a><a class="keep" href="#contact">ENGAGE</a></nav></header>
+<div class="grid">
+  <section class="panel hero">
+    <p class="tag">cyber · critical infrastructure</p>
+    <h1>When the console turns amber, counsel is already in the room.</h1>
+    <p class="sub">Incident response and regulatory counsel for operators who rehearse the bad day.</p>
+    <a class="cta" href="#contact">ENGAGE DESK</a>
+  </section>
+  <aside class="panel" id="ops"><h2>Channels</h2><ul><li>Regulator notice</li><li>Customer narrative</li><li>Forensic privilege</li></ul></aside>
+  <aside class="panel" id="alerts"><h2>Status</h2><ul><li>Playbooks current</li><li>On-call counsel</li><li>Tabletops quarterly</li></ul></aside>
+  <footer class="panel" id="contact"><h2>Intake</h2><p style="font-size:.85rem;opacity:.75">24/7 partner line for declared incidents</p></footer>
+</div>
+
+</body>
+</html>

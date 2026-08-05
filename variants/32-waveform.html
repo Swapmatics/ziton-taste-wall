@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="Cache-Control" content="no-cache" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Fault Line Counsel — 32-waveform</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+<style>
+
+:root{--bg:#0c0e12;--fg:#edf0f5;--sig:#7aa2ff;--u:1rem}
+*{box-sizing:border-box;margin:0;padding:0}body{background:var(--bg);color:var(--fg);font-family:"DM Sans",sans-serif}
+a{color:inherit;text-decoration:none}
+.nav{display:flex;justify-content:space-between;padding:1rem 1.3rem}
+.brand{font-family:Syne,sans-serif;font-weight:700}.nav a{font-size:.75rem;opacity:.6}.nav a.keep{opacity:1;color:var(--sig)}
+@media(max-width:700px){.nav a:not(.keep){display:none}}
+.hero{padding:2rem 1.3rem}
+.tag{font-size:.7rem;letter-spacing:.12em;text-transform:uppercase;color:var(--sig)}
+h1{font-family:Syne,sans-serif;font-weight:800;font-size:clamp(2.2rem,5vw,3.8rem);line-height:1.05;margin-top:.6rem;letter-spacing:-.03em;max-width:13ch}
+.sub{margin-top:1rem;line-height:1.6;opacity:.75;max-width:34rem}
+.cta{display:inline-block;margin-top:1.3rem;background:var(--sig);color:#0c0e12;font-weight:700;padding:.65rem 1rem;font-size:.8rem;border-radius:4px}
+.wave{display:flex;align-items:flex-end;gap:4px;height:100px;padding:1.5rem 1.3rem 2rem;margin-top:1rem}
+.wave i{flex:1;background:var(--sig);opacity:.35;border-radius:2px 2px 0 0;display:block}
+.wave i:nth-child(3),.wave i:nth-child(8),.wave i:nth-child(12){opacity:1;background:#fff}
+footer.contact{padding:1.1rem 1.3rem;border-top:1px solid #222;font-size:.85rem;opacity:.65}
+
+</style>
+</head>
+<body>
+
+<header class="nav"><div class="brand">Fault Line Counsel</div><nav><a href="#signal">Signal</a><a class="keep" href="#contact">Trace</a></nav></header>
+<section class="hero">
+  <p class="tag">Disputes · Zurich</p>
+  <h1>Read the spike. Then answer.</h1>
+  <p class="sub">Complex commercial disputes counsel that listens for the early tremor — before it becomes the case.</p>
+  <a class="cta" href="#contact">Send a trace</a>
+</section>
+<div class="wave" id="signal" aria-hidden="true">
+  <i style="height:20%"></i><i style="height:35%"></i><i style="height:80%"></i><i style="height:40%"></i><i style="height:28%"></i><i style="height:55%"></i><i style="height:30%"></i><i style="height:95%"></i><i style="height:45%"></i><i style="height:25%"></i><i style="height:38%"></i><i style="height:70%"></i><i style="height:22%"></i><i style="height:48%"></i>
+</div>
+<footer class="contact" id="contact">Dispute intake · partner reads the spike first</footer>
+
+</body>
+</html>

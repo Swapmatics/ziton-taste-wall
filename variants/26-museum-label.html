@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="Cache-Control" content="no-cache" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Gallery Counsel — 26-museum-label</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;500;600;700&family=Work+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<style>
+
+:root{--bg:#f5f3ef;--fg:#1a1a1a;--mute:#666;--u:1.15rem}
+*{box-sizing:border-box;margin:0;padding:0}body{background:var(--bg);color:var(--fg);font-family:"Work Sans",sans-serif}
+a{color:inherit;text-decoration:none}
+.nav{padding:1rem 1.4rem;display:flex;justify-content:space-between;font-size:.75rem}
+.brand{font-weight:600;letter-spacing:.04em}.nav a{opacity:.5}.nav a.keep{opacity:1}
+@media(max-width:600px){.nav a:not(.keep){display:none}}
+.room{min-height:75vh;display:grid;place-items:center;padding:2rem}
+.field{width:min(70vw,520px);aspect-ratio:4/3;background:linear-gradient(145deg,#d9d4cb,#b8b2a6);margin-bottom:1.4rem}
+.label{max-width:28rem}
+.artist{font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;opacity:.55;margin-bottom:.35rem}
+h1{font-family:"Libre Baskerville",serif;font-weight:400;font-size:1.35rem;line-height:1.4}
+.meta{margin-top:.5rem;font-size:.8rem;color:var(--mute);line-height:1.5}
+.cta{display:inline-block;margin-top:1.1rem;font-size:.78rem;border-bottom:1px solid var(--fg);padding-bottom:.1rem}
+footer.contact{padding:1.2rem 1.4rem;border-top:1px solid #ddd;font-size:.8rem;opacity:.6}
+
+</style>
+</head>
+<body>
+
+<header class="nav"><div class="brand">Gallery Counsel</div><nav><a href="#collection">Collection</a><a class="keep" href="#contact">Inquire</a></nav></header>
+<section class="room">
+  <div>
+    <div class="field" role="img" aria-label="Neutral wall field"></div>
+    <div class="label">
+      <p class="artist">Art law · Paris</p>
+      <h1>Provenance is the argument.</h1>
+      <p class="meta">Title, restitution, and exhibition risk for works that must remain showable.</p>
+      <a class="cta" href="#contact">Request a condition note</a>
+    </div>
+  </div>
+</section>
+<footer class="contact" id="contact"><span id="collection">Private collection desk</span> · introductions preferred</footer>
+
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="Cache-Control" content="no-cache" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Visa Quire — 33-passport</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;600;700&family=Karla:wght@400;600;700&display=swap" rel="stylesheet" />
+<style>
+
+:root{--bg:#2a3340;--page:#f4efe4;--fg:#1a1a1a;--ink:#1e3a5f;--u:1.15rem}
+*{box-sizing:border-box;margin:0;padding:0}body{background:var(--bg);color:var(--fg);font-family:Karla,sans-serif;min-height:100vh;display:grid;place-items:center;padding:1.5rem}
+a{color:inherit;text-decoration:none}
+.book{width:min(94vw,640px);background:var(--page);display:grid;grid-template-columns:1fr 1fr;min-height:420px;box-shadow:0 20px 50px color-mix(in srgb,#000 35%,transparent)}
+@media(max-width:700px){.book{grid-template-columns:1fr}}
+.page{padding:1.5rem 1.3rem;position:relative}
+.page.left{border-right:1px solid #d4cbb8}
+@media(max-width:700px){.page.left{border-right:0;border-bottom:1px solid #d4cbb8}}
+.brand{font-family:"Libre Baskerville",serif;font-size:.95rem;font-weight:700;color:var(--ink)}
+.nav a{font-size:.7rem;margin-left:.7rem;opacity:.55}.nav a.keep{opacity:1}
+@media(max-width:700px){.nav a:not(.keep){display:none}}
+.tag{font-size:.65rem;letter-spacing:.14em;text-transform:uppercase;opacity:.5;margin-top:2rem}
+h1{font-family:"Libre Baskerville",serif;font-size:1.55rem;line-height:1.25;margin-top:.5rem}
+.sub{margin-top:.8rem;font-size:.9rem;line-height:1.55}
+.cta{display:inline-block;margin-top:1.1rem;font-size:.78rem;font-weight:600;color:var(--ink);border-bottom:1px solid var(--ink)}
+.stamp{width:110px;height:110px;border:2px solid color-mix(in srgb,#9b1c1c 70%,transparent);border-radius:50%;display:grid;place-items:center;transform:rotate(-12deg);margin:1.5rem auto 0;font-size:.65rem;letter-spacing:.1em;text-transform:uppercase;color:#9b1c1c;text-align:center;opacity:.7;font-weight:700}
+footer.contact{grid-column:1/-1;padding:1rem 1.3rem;background:#ebe4d6;font-size:.8rem;opacity:.7}
+
+</style>
+</head>
+<body>
+
+<article class="book">
+  <div class="page left">
+    <div class="brand">Visa Quire</div>
+    <nav class="nav"><a href="#mobility">Mobility</a><a class="keep" href="#contact">Stamp</a></nav>
+    <p class="tag">Immigration · global mobility</p>
+    <h1>Cross the border with the file intact.</h1>
+    <p class="sub">Business immigration for executives whose calendars ignore passport queues.</p>
+    <a class="cta" href="#contact">Request a stamp review</a>
+  </div>
+  <div class="page">
+    <div class="stamp" aria-hidden="true">Entry<br/>cleared</div>
+    <p style="margin-top:2rem;font-size:.85rem;line-height:1.55;opacity:.75" id="mobility">Visas, secondments, and contested entries — one desk that speaks consulate and boardroom.</p>
+  </div>
+  <footer class="contact" id="contact">Mobility intake · urgent filings flagged same day</footer>
+</article>
+
+</body>
+</html>
