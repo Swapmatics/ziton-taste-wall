@@ -1,6 +1,10 @@
 # Ziton Taste Wall
 
-**Contract: 45/45 PASS**
+**Contract gate: runnable in this repo**
 
-- Live: https://swapmatics.github.io/ziton-taste-wall/batch-3.html?v=contract
-- See CONTRACT.md
+```bash
+python3 scripts/validate_taste_wall.py
+```
+
+- Live: https://swapmatics.github.io/ziton-taste-wall/batch-3.html?v=gate
+- See [CONTRACT.md](./CONTRACT.md)
