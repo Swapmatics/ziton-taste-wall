@@ -3,69 +3,71 @@
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Fjord Legal — Taste wall 17-arctic-clinic</title>
+<title>Fjord Legal — 17-arctic-clinic</title>
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link href="https://fonts.googleapis.com/css2?family=Josefin+Sans|Hind:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;500;600;700&family=Hind:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
 <style>
-:root {
-  --bg: #f2f6f8;
-  --fg: #102030;
-  --accent: #2a7a8c;
-  --display: "Josefin Sans", Georgia, serif;
-  --body: "Hind", system-ui, sans-serif;
+
+:root { --bg:#f2f6f8; --fg:#102030; --teal:#2a7a8c; --u:1rem; }
+* { box-sizing:border-box; margin:0; padding:0; }
+body { background:var(--bg); color:var(--fg); font-family:Hind,sans-serif; }
+a { color:inherit; text-decoration:none; }
+.sys {
+  display:grid; grid-template-columns:repeat(12,1fr); gap:0.75rem;
+  max-width:1100px; margin:0 auto; padding: calc(var(--u)*1.2);
 }
-* { box-sizing: border-box; margin: 0; padding: 0; }
-html, body { min-height: 100%; background: var(--bg); color: var(--fg); font-family: var(--body); }
-a { color: inherit; text-decoration: none; }
-.brand { font-family: var(--display); letter-spacing: 0.02em; }
-h1 { font-family: var(--display); font-weight: 500; line-height: 1.05; }
-.sub { opacity: 0.78; max-width: 36rem; line-height: 1.55; }
+.nav { grid-column:1 / -1; display:flex; justify-content:space-between; align-items:baseline; padding-bottom:0.8rem; border-bottom:1px solid color-mix(in srgb, var(--fg) 12%, transparent); }
+.brand { font-family:"Josefin Sans",sans-serif; font-weight:500; letter-spacing:0.08em; text-transform:uppercase; font-size:0.85rem; }
+.nav a { font-size:0.78rem; margin-left:1rem; opacity:0.6; }
+@media (max-width:700px){ .nav a:not(.keep){display:none;} }
+.rules { grid-column:1 / 3; display:flex; flex-direction:column; gap:5px; padding-top:2rem; }
+.rules i { display:block; height:1px; background:var(--teal); }
+.rules i:nth-child(1){width:40%;} .rules i:nth-child(2){width:70%;} .rules i:nth-child(3){width:100%;}
+.copy { grid-column:3 / 10; padding-top:1.5rem; }
+@media (max-width:900px){ .rules{display:none;} .copy{grid-column:1 / -1;} }
+.tag { font-family:"Josefin Sans",sans-serif; font-size:0.68rem; letter-spacing:0.18em; text-transform:uppercase; color:var(--teal); }
+h1 { font-family:"Josefin Sans",sans-serif; font-weight:300; font-size:clamp(2.2rem,4.8vw,3.6rem); line-height:1.15; max-width:14ch; margin-top:0.7rem; letter-spacing:0.01em; }
+.sub { margin-top:1rem; max-width:34rem; line-height:1.65; }
 .cta {
-  display: inline-flex; align-items: center; gap: 0.6rem;
-  margin-top: 1.75rem; padding: 0.9rem 1.35rem;
-  border: 1px solid color-mix(in srgb, var(--fg) 35%, transparent);
-  font-size: 0.85rem; letter-spacing: 0.06em; text-transform: uppercase;
-  transition: background 0.25s, color 0.25s;
+  display:inline-block; margin-top:1.4rem;
+  border:1px solid var(--teal); color:var(--teal);
+  padding:0.45rem 0.85rem; font-size:0.78rem; letter-spacing:0.06em; text-transform:uppercase;
 }
-.cta:hover { background: var(--fg); color: var(--bg); }
-.tag { font-size: 0.72rem; letter-spacing: 0.18em; text-transform: uppercase; opacity: 0.55; }
-nav {
-  display: flex; justify-content: space-between; align-items: baseline;
-  padding: 1.4rem 2rem; position: relative; z-index: 2;
+.side { grid-column:10 / -1; padding-top:2rem; font-size:0.82rem; line-height:1.5; opacity:0.7; }
+@media (max-width:900px){ .side{grid-column:1 / -1; padding-top:0;} }
+.phase {
+  grid-column:1 / -1; display:grid; grid-template-columns:repeat(4,1fr); gap:0.75rem;
+  margin-top:1rem; padding-top:1.2rem; border-top:1px solid color-mix(in srgb, var(--fg) 12%, transparent);
 }
-nav ul { display: flex; gap: 1.5rem; list-style: none; font-size: 0.8rem; opacity: 0.7; }
-@media (max-width: 720px) { nav ul { display: none; } }
+.phase div { background:white; padding:0.9rem; border:1px solid color-mix(in srgb, var(--fg) 10%, transparent); }
+.phase strong { display:block; font-family:"Josefin Sans",sans-serif; font-weight:500; font-size:0.75rem; letter-spacing:0.08em; text-transform:uppercase; color:var(--teal); margin-bottom:0.35rem; }
+@media (max-width:800px){ .phase{grid-template-columns:1fr 1fr;} }
 
-.hero { min-height: 100vh; padding: 0 8vw; display: grid; align-content: center; gap: 1rem; }
-h1 { font-size: clamp(2.4rem, 5vw, 4rem); max-width: 14ch; font-weight: 300; letter-spacing: 0.02em; }
-.rule-stack { display: flex; flex-direction: column; gap: 4px; width: 3rem; margin-bottom: 1rem; }
-.rule-stack span { height: 1px; background: var(--accent); }
-
-.hero-visual {
-  display: block;
-  width: min(92vw, 1100px);
-  height: auto;
-  margin: 1.5rem 0 0;
-  object-fit: cover;
-  max-height: 42vh;
-}
 </style>
 </head>
 <body>
 
-<nav>
-  <div class="brand">Fjord Legal</div>
-  <ul><li>Work</li><li>People</li><li>Insights</li><li>Contact</li></ul>
-</nav>
-<section class="hero">
-  <div class="rule-stack" aria-hidden="true"><span></span><span></span><span></span></div>
-  <p class="tag">Life sciences · Stockholm</p>
-  <h1>Clinical precision. Legal spine.</h1>
-<img class="hero-visual" src="../assets/17.svg" width="1600" height="1000" alt="Hero atmosphere for variant 17" />
+<div class="sys">
+  <header class="nav">
+    <div class="brand">Fjord Legal</div>
+    <nav><a href="#reg">Regulatory</a><a href="#ip">IP</a><a class="keep" href="#contact">Dossier</a></nav>
+  </header>
+  <div class="rules" aria-hidden="true"><i></i><i></i><i></i></div>
+  <div class="copy">
+    <p class="tag">Life sciences · Stockholm</p>
+    <h1>Clinical precision. Legal spine.</h1>
+    <p class="sub">Regulatory and IP counsel for companies measuring in phase gates.</p>
+    <a class="cta" href="#contact">Start a dossier</a>
+  </div>
+  <aside class="side">Measured advice keyed to phase gates — not generic life-sciences boilerplate.</aside>
+  <section class="phase">
+    <div id="reg"><strong>Phase I</strong>First regulatory map</div>
+    <div id="ip"><strong>Phase II</strong>IP under change</div>
+    <div><strong>Phase III</strong>Commercial readiness</div>
+    <div id="contact"><strong>Intake</strong>Structured dossier</div>
+  </section>
+</div>
 
-  <p class="sub">Regulatory and IP counsel for companies measuring in phase gates.</p>
-  <a class="cta" href="#">Start a dossier</a>
-</section>
 </body>
 </html>

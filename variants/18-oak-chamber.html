@@ -3,67 +3,70 @@
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Whitaker Chambers — Taste wall 18-oak-chamber</title>
+<title>Whitaker Chambers — 18-oak-chamber</title>
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link href="https://fonts.googleapis.com/css2?family=Raleway|Cormorant:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css2?family=Cormorant:wght@400;500;600;700&family=Raleway:wght@400;500;600;700&display=swap" rel="stylesheet" />
 <style>
-:root {
-  --bg: #2a231c;
-  --fg: #efe6d8;
-  --accent: #b8956c;
-  --display: "Cormorant", Georgia, serif;
-  --body: "Raleway", system-ui, sans-serif;
+
+:root { --bg:#2a231c; --fg:#efe6d8; --oak:#b8956c; --s:1.25rem; }
+* { box-sizing:border-box; margin:0; padding:0; }
+body { background:var(--bg); color:var(--fg); font-family:Raleway,sans-serif; }
+a { color:inherit; text-decoration:none; }
+.nav {
+  display:flex; justify-content:space-between; padding:calc(var(--s)*1) calc(var(--s)*1.5);
+  border-bottom:1px solid color-mix(in srgb, var(--oak) 35%, transparent);
 }
-* { box-sizing: border-box; margin: 0; padding: 0; }
-html, body { min-height: 100%; background: var(--bg); color: var(--fg); font-family: var(--body); }
-a { color: inherit; text-decoration: none; }
-.brand { font-family: var(--display); letter-spacing: 0.02em; }
-h1 { font-family: var(--display); font-weight: 500; line-height: 1.05; }
-.sub { opacity: 0.78; max-width: 36rem; line-height: 1.55; }
+.brand { font-family:Cormorant,serif; font-size:1.4rem; font-weight:600; }
+.nav a { font-size:0.75rem; letter-spacing:0.1em; text-transform:uppercase; opacity:0.65; margin-left:1.1rem; }
+@media (max-width:700px){ .nav a:not(.keep){display:none;} }
+.hero {
+  min-height:72vh; display:flex; flex-direction:column; align-items:center; justify-content:center; text-align:center;
+  padding: calc(var(--s)*2) calc(var(--s)*1.5);
+  background: linear-gradient(185deg,#3a3228,#2a231c 55%,#1a1510);
+}
+.seal {
+  width:72px; height:72px; border:1px solid var(--oak); border-radius:50%;
+  display:grid; place-items:center; margin-bottom:calc(var(--s)*1.2);
+  font-family:Cormorant,serif; color:var(--oak); font-size:1.4rem;
+}
+.tag { font-size:0.7rem; letter-spacing:0.2em; text-transform:uppercase; opacity:0.55; }
+h1 { font-family:Cormorant,serif; font-weight:500; font-size:clamp(2.6rem,6vw,4.6rem); line-height:1.08; max-width:14ch; margin-top:0.8rem; }
+.sub { margin-top:1rem; max-width:34rem; line-height:1.65; opacity:0.78; }
 .cta {
-  display: inline-flex; align-items: center; gap: 0.6rem;
-  margin-top: 1.75rem; padding: 0.9rem 1.35rem;
-  border: 1px solid color-mix(in srgb, var(--fg) 35%, transparent);
-  font-size: 0.85rem; letter-spacing: 0.06em; text-transform: uppercase;
-  transition: background 0.25s, color 0.25s;
+  margin-top:1.6rem;
+  font-size:0.78rem; letter-spacing:0.14em; text-transform:uppercase; color:var(--oak);
+  border:1px solid var(--oak); padding:0.7rem 1.2rem;
 }
-.cta:hover { background: var(--fg); color: var(--bg); }
-.tag { font-size: 0.72rem; letter-spacing: 0.18em; text-transform: uppercase; opacity: 0.55; }
-nav {
-  display: flex; justify-content: space-between; align-items: baseline;
-  padding: 1.4rem 2rem; position: relative; z-index: 2;
+.colophon {
+  display:grid; grid-template-columns:1fr 1fr 1fr; gap:1rem;
+  padding: calc(var(--s)*1.4) calc(var(--s)*1.5);
+  border-top:1px solid color-mix(in srgb, var(--oak) 30%, transparent);
+  font-size:0.82rem; opacity:0.7;
 }
-nav ul { display: flex; gap: 1.5rem; list-style: none; font-size: 0.8rem; opacity: 0.7; }
-@media (max-width: 720px) { nav ul { display: none; } }
+@media (max-width:700px){ .colophon{grid-template-columns:1fr;} }
+.colophon strong { display:block; font-family:Cormorant,serif; font-size:1.1rem; color:var(--oak); opacity:1; margin-bottom:0.35rem; }
 
-.hero { min-height: 100vh; padding: 0 8vw 10vh; display: flex; flex-direction: column; justify-content: flex-end;
-  background: linear-gradient(185deg, #3a3228, #2a231c 50%, #1a1510); }
-h1 { font-size: clamp(2.8rem, 6vw, 5rem); max-width: 13ch; }
-
-.hero-visual {
-  display: block;
-  width: min(92vw, 1100px);
-  height: auto;
-  margin: 1.5rem 0 0;
-  object-fit: cover;
-  max-height: 42vh;
-}
 </style>
 </head>
 <body>
 
-<nav>
+<header class="nav">
   <div class="brand">Whitaker Chambers</div>
-  <ul><li>Work</li><li>People</li><li>Insights</li><li>Contact</li></ul>
-</nav>
+  <nav><a href="#arb">Arbitration</a><a href="#seat">Seat</a><a class="keep" href="#contact">Engage</a></nav>
+</header>
 <section class="hero">
+  <div class="seal" aria-hidden="true">WC</div>
   <p class="tag">Arbitration · Geneva</p>
-  <h1 style="margin-top:1rem">Neutral ground. Hard advocacy.</h1>
-<img class="hero-visual" src="../assets/18.svg" width="1600" height="1000" alt="Hero atmosphere for variant 18" />
-
-  <p class="sub" style="margin-top:1.2rem">International arbitration for parties who need a sealed outcome.</p>
-  <a class="cta" href="#">Engage counsel</a>
+  <h1>Neutral ground. Hard advocacy.</h1>
+  <p class="sub">International arbitration for parties who need a sealed outcome.</p>
+  <a class="cta" href="#contact">Engage counsel</a>
 </section>
+<section class="colophon">
+  <div id="arb"><strong>Tribunal</strong>Hard advocacy in sealed rooms</div>
+  <div id="seat"><strong>Seat</strong>Geneva and beyond</div>
+  <div id="contact"><strong>Engage</strong>Written introductions preferred</div>
+</section>
+
 </body>
 </html>

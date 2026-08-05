@@ -3,67 +3,71 @@
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Cadence Brooks — Taste wall 11-linen-ledger</title>
+<title>Cadence Brooks — 11-linen-ledger</title>
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda|Nunito+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:wght@400;500;600;700&family=Nunito+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
 <style>
-:root {
-  --bg: #f6f0e6;
-  --fg: #2a241c;
-  --accent: #8a6a3c;
-  --display: "Bodoni Moda", Georgia, serif;
-  --body: "Nunito Sans", system-ui, sans-serif;
+
+:root { --bg:#f6f0e6; --fg:#2a241c; --copper:#8a6a3c; --row:2rem; }
+* { box-sizing:border-box; margin:0; padding:0; }
+body { background:var(--bg); color:var(--fg); font-family:"Nunito Sans",sans-serif; }
+a { color:inherit; text-decoration:none; }
+.nav {
+  display:flex; justify-content:space-between; padding:1rem 7vw;
+  border-bottom:1px solid color-mix(in srgb, var(--fg) 18%, transparent);
 }
-* { box-sizing: border-box; margin: 0; padding: 0; }
-html, body { min-height: 100%; background: var(--bg); color: var(--fg); font-family: var(--body); }
-a { color: inherit; text-decoration: none; }
-.brand { font-family: var(--display); letter-spacing: 0.02em; }
-h1 { font-family: var(--display); font-weight: 500; line-height: 1.05; }
-.sub { opacity: 0.78; max-width: 36rem; line-height: 1.55; }
+.brand { font-family:"Bodoni Moda",serif; font-size:1.35rem; }
+.nav nav a { font-size:0.78rem; margin-left:1.2rem; opacity:0.65; }
+@media (max-width:700px){ .nav nav a:not(.only){display:none;} }
+.hero {
+  min-height:68vh; padding: 4vh 7vw;
+  display:flex; flex-direction:column; justify-content:center;
+  background: repeating-linear-gradient(0deg, transparent, transparent calc(var(--row) - 1px), color-mix(in srgb, var(--fg) 7%, transparent) var(--row));
+}
+.tag { font-size:0.72rem; letter-spacing:0.12em; text-transform:uppercase; color:var(--copper); }
+h1 {
+  font-family:"Bodoni Moda",serif; font-weight:500;
+  font-size:clamp(2.6rem,6vw,4.6rem); line-height:1.08; max-width:12ch;
+  margin-top:0.7rem; background:var(--bg); display:inline; box-decoration-break:clone; -webkit-box-decoration-break:clone;
+}
+.sub { margin-top:1.2rem; max-width:32rem; line-height:1.65; background:var(--bg); padding:0.35rem 0; }
 .cta {
-  display: inline-flex; align-items: center; gap: 0.6rem;
-  margin-top: 1.75rem; padding: 0.9rem 1.35rem;
-  border: 1px solid color-mix(in srgb, var(--fg) 35%, transparent);
-  font-size: 0.85rem; letter-spacing: 0.06em; text-transform: uppercase;
-  transition: background 0.25s, color 0.25s;
+  margin-top:1.6rem; align-self:flex-start;
+  font-family:"Bodoni Moda",serif; font-size:1rem;
+  border-bottom:1px solid var(--copper); padding-bottom:0.15rem;
 }
-.cta:hover { background: var(--fg); color: var(--bg); }
-.tag { font-size: 0.72rem; letter-spacing: 0.18em; text-transform: uppercase; opacity: 0.55; }
-nav {
-  display: flex; justify-content: space-between; align-items: baseline;
-  padding: 1.4rem 2rem; position: relative; z-index: 2;
+table {
+  width:100%; border-collapse:collapse; margin-top:2rem;
+  font-variant-numeric:tabular-nums; font-size:0.9rem;
 }
-nav ul { display: flex; gap: 1.5rem; list-style: none; font-size: 0.8rem; opacity: 0.7; }
-@media (max-width: 720px) { nav ul { display: none; } }
+th, td { text-align:left; padding:0.85rem 7vw; border-top:1px solid color-mix(in srgb, var(--fg) 16%, transparent); }
+th { font-family:"Bodoni Moda",serif; font-weight:500; font-size:0.95rem; }
 
-.hero { min-height: 100vh; padding: 0 7vw 8vh; display: flex; flex-direction: column; justify-content: center;
-  background: repeating-linear-gradient(0deg, transparent, transparent 31px, color-mix(in srgb, var(--fg) 6%, transparent) 32px), var(--bg); }
-h1 { font-size: clamp(2.8rem, 6vw, 5rem); max-width: 12ch; background: var(--bg); display: inline; box-decoration-break: clone; -webkit-box-decoration-break: clone; padding: 0.1em 0; }
-
-.hero-visual {
-  display: block;
-  width: min(92vw, 1100px);
-  height: auto;
-  margin: 1.5rem 0 0;
-  object-fit: cover;
-  max-height: 42vh;
-}
 </style>
 </head>
 <body>
 
-<nav>
+<header class="nav">
   <div class="brand">Cadence Brooks</div>
-  <ul><li>Work</li><li>People</li><li>Insights</li><li>Contact</li></ul>
-</nav>
+  <nav aria-label="Primary">
+    <a href="#land">Land</a><a href="#capital">Capital</a><a class="only" href="#contact">Project desk</a>
+  </nav>
+</header>
 <section class="hero">
   <p class="tag">Real estate · Dallas</p>
-  <h1 style="margin-top:1rem">Land, capital, permanence.</h1>
-<img class="hero-visual" src="../assets/11.svg" width="1600" height="1000" alt="Hero atmosphere for variant 11" />
-
-  <p class="sub" style="margin-top:1.4rem;background:var(--bg);padding:0.4rem 0">Development and investment counsel for people who build for decades.</p>
-  <a class="cta" href="#">Discuss a project</a>
+  <h1>Land, capital, permanence.</h1>
+  <p class="sub">Development and investment counsel for people who build for decades.</p>
+  <a class="cta" href="#contact">Discuss a project</a>
 </section>
+<table>
+  <thead><tr><th scope="col">Matter</th><th scope="col">Horizon</th><th scope="col">Lead</th></tr></thead>
+  <tbody>
+    <tr id="land"><td>Entitlements</td><td>Multi-year</td><td>Land desk</td></tr>
+    <tr id="capital"><td>Joint ventures</td><td>Capital cycle</td><td>JV partners</td></tr>
+    <tr id="contact"><td>Intake</td><td>This week</td><td>Project counsel</td></tr>
+  </tbody>
+</table>
+
 </body>
 </html>

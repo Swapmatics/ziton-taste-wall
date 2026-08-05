@@ -3,75 +3,83 @@
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Ellison Rowe — Taste wall 02-parchment-authority</title>
+<title>Ellison Rowe — 02-parchment-authority</title>
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans|Libre+Baskerville:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;600;700&family=IBM+Plex+Sans:wght@400;600;700&display=swap" rel="stylesheet" />
 <style>
-:root {
-  --bg: #f3eadc;
-  --fg: #1a1916;
-  --accent: #1e3a5f;
-  --display: "Libre Baskerville", Georgia, serif;
-  --body: "IBM Plex Sans", system-ui, sans-serif;
+
+:root { --bg:#f3eadc; --ink:#1a1916; --navy:#1e3a5f; --space:1.25rem; }
+* { box-sizing:border-box; margin:0; padding:0; }
+body { background:var(--bg); color:var(--ink); font-family:"IBM Plex Sans",sans-serif; }
+a { color:inherit; }
+.mast {
+  display:grid; grid-template-columns:1fr auto; align-items:end;
+  padding: var(--space) calc(var(--space)*1.6);
+  border-bottom:1.5px solid var(--ink);
 }
-* { box-sizing: border-box; margin: 0; padding: 0; }
-html, body { min-height: 100%; background: var(--bg); color: var(--fg); font-family: var(--body); }
-a { color: inherit; text-decoration: none; }
-.brand { font-family: var(--display); letter-spacing: 0.02em; }
-h1 { font-family: var(--display); font-weight: 500; line-height: 1.05; }
-.sub { opacity: 0.78; max-width: 36rem; line-height: 1.55; }
+.brand { font-family:"Libre Baskerville",serif; font-size:1.1rem; font-weight:700; }
+.navlinks { display:flex; gap:calc(var(--space)*1.1); font-size:0.7rem; letter-spacing:0.06em; text-transform:uppercase; }
+.navlinks a { text-decoration:none; }
+.burger { display:none; font:inherit; background:none; border:1px solid var(--ink); padding:0.35rem 0.55rem; font-size:0.65rem; letter-spacing:0.08em; text-transform:uppercase; }
+@media (max-width:800px){ .navlinks{display:none;} .burger{display:inline-block;} }
+.shell { display:grid; grid-template-columns:1.15fr 0.85fr; min-height:calc(100vh - 4.5rem); }
+@media (max-width:900px){ .shell{grid-template-columns:1fr;} }
+.left { padding: calc(var(--space)*3) calc(var(--space)*2.2) calc(var(--space)*3); display:flex; flex-direction:column; justify-content:center; }
+.chap { font-size:0.7rem; font-weight:600; letter-spacing:0.12em; text-transform:uppercase; color:var(--navy); margin-bottom:calc(var(--space)*0.9); }
+h1 { font-family:"Libre Baskerville",serif; font-weight:700; font-size:clamp(2.2rem,4.8vw,3.6rem); line-height:1.15; max-width:14ch; }
+.sub { margin-top:calc(var(--space)*1.1); max-width:32rem; font-size:1rem; line-height:1.7; }
 .cta {
-  display: inline-flex; align-items: center; gap: 0.6rem;
-  margin-top: 1.75rem; padding: 0.9rem 1.35rem;
-  border: 1px solid color-mix(in srgb, var(--fg) 35%, transparent);
-  font-size: 0.85rem; letter-spacing: 0.06em; text-transform: uppercase;
-  transition: background 0.25s, color 0.25s;
+  margin-top:calc(var(--space)*1.6); align-self:flex-start;
+  font-size:0.78rem; font-weight:600; letter-spacing:0.04em;
+  text-decoration:none; border-bottom:2px solid var(--navy); padding-bottom:0.2rem;
 }
-.cta:hover { background: var(--fg); color: var(--bg); }
-.tag { font-size: 0.72rem; letter-spacing: 0.18em; text-transform: uppercase; opacity: 0.55; }
-nav {
-  display: flex; justify-content: space-between; align-items: baseline;
-  padding: 1.4rem 2rem; position: relative; z-index: 2;
+.right {
+  background: var(--navy); color:#f3eadc;
+  display:flex; flex-direction:column; justify-content:flex-end;
+  padding: calc(var(--space)*2);
+  min-height:38vh;
 }
-nav ul { display: flex; gap: 1.5rem; list-style: none; font-size: 0.8rem; opacity: 0.7; }
-@media (max-width: 720px) { nav ul { display: none; } }
+.right .num { font-family:"Libre Baskerville",serif; font-size:4.5rem; line-height:1; opacity:0.35; }
+.right p { margin-top:calc(var(--space)*1.2); font-size:0.95rem; line-height:1.55; max-width:22rem; }
+.strip {
+  display:grid; grid-template-columns:repeat(4,1fr);
+  border-top:1.5px solid var(--ink);
+}
+.strip div { padding:calc(var(--space)*1.1); border-right:1px solid color-mix(in srgb, var(--ink) 25%, transparent); font-size:0.78rem; line-height:1.45; }
+.strip div:last-child { border-right:0; }
+.strip strong { display:block; font-family:"Libre Baskerville",serif; font-size:1rem; margin-bottom:0.35rem; }
+@media (max-width:800px){ .strip{grid-template-columns:1fr 1fr;} }
 
-.shell { display: grid; grid-template-columns: 1.1fr 0.9fr; min-height: 100vh; }
-@media (max-width: 900px) { .shell { grid-template-columns: 1fr; } }
-.left { padding: 2rem 3rem 4rem; display: flex; flex-direction: column; justify-content: center; }
-.right { background:
-  linear-gradient(160deg, color-mix(in srgb, var(--accent) 85%, black), color-mix(in srgb, var(--accent) 40%, #000));
-  min-height: 40vh; position: relative; }
-.right::after { content: ""; position: absolute; inset: 12% 14%; border: 1px solid color-mix(in srgb, white 25%, transparent); }
-h1 { font-size: clamp(2.6rem, 5.5vw, 4.4rem); max-width: 12ch; }
-
-.hero-visual {
-  display: block;
-  width: min(92vw, 1100px);
-  height: auto;
-  margin: 1.5rem 0 0;
-  object-fit: cover;
-  max-height: 42vh;
-}
 </style>
 </head>
 <body>
 
-<nav>
+<header class="mast">
   <div class="brand">Ellison Rowe</div>
-  <ul><li>Work</li><li>People</li><li>Insights</li><li>Contact</li></ul>
-</nav>
+  <nav class="navlinks" aria-label="Primary">
+    <a href="#practice">Practice</a><a href="#people">People</a><a href="#contact">Contact</a>
+  </nav>
+  <a class="burger" href="#contact">Menu · Contact</a>
+</header>
 <div class="shell">
   <div class="left">
-    <p class="tag">Corporate · New York</p>
-    <h1 style="margin-top:1rem">Quiet power. Exact counsel.</h1>
-<img class="hero-visual" src="../assets/02.svg" width="1600" height="1000" alt="Hero atmosphere for variant 02" />
-
-    <p class="sub" style="margin-top:1.2rem">M&A and governance for boards who prefer precision to noise.</p>
-    <a class="cta" href="#">Speak with a partner</a>
+    <p class="chap">Chapter I · Corporate · New York</p>
+    <h1>Quiet power. Exact counsel.</h1>
+    <p class="sub">M&amp;A and governance for boards who prefer precision to noise.</p>
+    <a class="cta" href="#contact">Speak with a partner →</a>
   </div>
-  <div class="right" aria-hidden="true"></div>
+  <aside class="right" aria-label="Positioning">
+    <div class="num">01</div>
+    <p>Authority lives in what is withheld — then delivered without waste.</p>
+  </aside>
 </div>
+<section class="strip" id="practice">
+  <div><strong>Boards</strong>Fiduciary clarity under pressure</div>
+  <div><strong>Deals</strong>M&amp;A with disciplined narrative control</div>
+  <div><strong>Governance</strong>Charters that survive actual use</div>
+  <div id="contact"><strong>Intake</strong>Partner-led, never routinized</div>
+</section>
+
 </body>
 </html>

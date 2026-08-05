@@ -3,70 +3,76 @@
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Aether Counsel — Taste wall 10-glass-tower</title>
+<title>Aether Counsel — 10-glass-tower</title>
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link href="https://fonts.googleapis.com/css2?family=Syne|DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
 <style>
-:root {
-  --bg: #0e1116;
-  --fg: #f0f2f5;
-  --accent: #5b8cff;
-  --display: "Syne", Georgia, serif;
-  --body: "DM Sans", system-ui, sans-serif;
+
+:root { --bg:#0e1116; --fg:#f0f2f5; --blue:#5b8cff; --pad:1.1rem; }
+* { box-sizing:border-box; margin:0; padding:0; }
+body { background:var(--bg); color:var(--fg); font-family:"DM Sans",sans-serif; }
+a { color:inherit; text-decoration:none; }
+.nav {
+  display:flex; justify-content:space-between; align-items:center;
+  padding: var(--pad) calc(var(--pad)*1.3);
+  border-bottom:1px solid color-mix(in srgb, var(--fg) 10%, transparent);
 }
-* { box-sizing: border-box; margin: 0; padding: 0; }
-html, body { min-height: 100%; background: var(--bg); color: var(--fg); font-family: var(--body); }
-a { color: inherit; text-decoration: none; }
-.brand { font-family: var(--display); letter-spacing: 0.02em; }
-h1 { font-family: var(--display); font-weight: 500; line-height: 1.05; }
-.sub { opacity: 0.78; max-width: 36rem; line-height: 1.55; }
+.brand { font-family:Syne,sans-serif; font-weight:700; letter-spacing:-0.02em; }
+.chips { display:flex; gap:0.4rem; flex-wrap:wrap; }
+.chips a {
+  font-size:0.68rem; padding:0.3rem 0.55rem;
+  border:1px solid color-mix(in srgb, var(--fg) 18%, transparent); border-radius:4px; opacity:0.7;
+}
+@media (max-width:700px){ .chips a:not(.p){display:none;} }
+.hero {
+  padding: calc(var(--pad)*3) calc(var(--pad)*1.5);
+  background: linear-gradient(200deg,#151a24,#0e1116 55%,#080a0e);
+}
+.chip { font-size:0.72rem; opacity:0.55; margin-bottom:calc(var(--pad)*0.8); }
+.line { height:1px; width:min(55vw,480px); background:linear-gradient(90deg,var(--blue),transparent); margin-bottom:calc(var(--pad)*1); }
+h1 { font-family:Syne,sans-serif; font-weight:800; font-size:clamp(2.4rem,5.5vw,4.4rem); line-height:1.02; max-width:13ch; letter-spacing:-0.03em; }
+.sub { margin-top:calc(var(--pad)*0.95); max-width:34rem; line-height:1.6; opacity:0.75; }
 .cta {
-  display: inline-flex; align-items: center; gap: 0.6rem;
-  margin-top: 1.75rem; padding: 0.9rem 1.35rem;
-  border: 1px solid color-mix(in srgb, var(--fg) 35%, transparent);
-  font-size: 0.85rem; letter-spacing: 0.06em; text-transform: uppercase;
-  transition: background 0.25s, color 0.25s;
+  display:inline-flex; margin-top:calc(var(--pad)*1.3);
+  background:var(--blue); color:#06080c; font-weight:700; font-size:0.8rem;
+  padding:0.7rem 1rem; border-radius:6px;
 }
-.cta:hover { background: var(--fg); color: var(--bg); }
-.tag { font-size: 0.72rem; letter-spacing: 0.18em; text-transform: uppercase; opacity: 0.55; }
-nav {
-  display: flex; justify-content: space-between; align-items: baseline;
-  padding: 1.4rem 2rem; position: relative; z-index: 2;
+.cards {
+  display:grid; grid-template-columns:repeat(3,1fr); gap:0.75rem;
+  padding: 0 calc(var(--pad)*1.5) calc(var(--pad)*2);
 }
-nav ul { display: flex; gap: 1.5rem; list-style: none; font-size: 0.8rem; opacity: 0.7; }
-@media (max-width: 720px) { nav ul { display: none; } }
+.cards article {
+  border:1px solid color-mix(in srgb, var(--fg) 12%, transparent);
+  background: color-mix(in srgb, white 3%, transparent);
+  padding: calc(var(--pad)*1); border-radius:10px;
+}
+.cards h2 { font-family:Syne,sans-serif; font-size:1rem; margin-bottom:0.4rem; }
+.cards p { font-size:0.82rem; opacity:0.65; line-height:1.5; }
+@media (max-width:800px){ .cards{grid-template-columns:1fr;} }
 
-.hero { min-height: 100vh; padding: 0 6vw; display: grid; align-content: center; gap: 1.2rem;
-  background: linear-gradient(200deg, #151a24, #0e1116 55%, #080a0e); }
-h1 { font-size: clamp(2.6rem, 5.5vw, 4.8rem); max-width: 13ch; }
-.chip { font-size: 0.75rem; opacity: 0.6; font-family: var(--body); }
-.gridline { height: 1px; width: min(60vw, 520px); background: linear-gradient(90deg, var(--accent), transparent); }
-
-.hero-visual {
-  display: block;
-  width: min(92vw, 1100px);
-  height: auto;
-  margin: 1.5rem 0 0;
-  object-fit: cover;
-  max-height: 42vh;
-}
 </style>
 </head>
 <body>
 
-<nav>
+<header class="nav">
   <div class="brand">Aether Counsel</div>
-  <ul><li>Work</li><li>People</li><li>Insights</li><li>Contact</li></ul>
-</nav>
+  <nav class="chips" aria-label="Primary">
+    <a href="#ip">IP</a><a href="#privacy">Privacy</a><a class="p" href="#contact">Book hours</a>
+  </nav>
+</header>
 <section class="hero">
   <p class="chip">Tech · Seattle</p>
-  <div class="gridline"></div>
+  <div class="line" aria-hidden="true"></div>
   <h1>Law at the speed of product.</h1>
-<img class="hero-visual" src="../assets/10.svg" width="1600" height="1000" alt="Hero atmosphere for variant 10" />
-
   <p class="sub">IP, privacy, and commercial counsel for companies shipping weekly.</p>
-  <a class="cta" href="#">Book founder hours</a>
+  <a class="cta" href="#contact">Book founder hours</a>
 </section>
+<section class="cards">
+  <article id="ip"><h2>Ship / protect</h2><p>IP decisions timed to release trains.</p></article>
+  <article id="privacy"><h2>Privacy defaults</h2><p>Counsel that matches how product actually works.</p></article>
+  <article id="contact"><h2>Founder hours</h2><p>Short calendars. Direct answers.</p></article>
+</section>
+
 </body>
 </html>

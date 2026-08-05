@@ -3,72 +3,82 @@
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Ashcroft & Vale — Taste wall 01-ink-monument</title>
+<title>Ashcroft & Vale — 01-ink-monument</title>
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond|Source+Sans+3:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet" />
 <style>
-:root {
-  --bg: #0c0b0a;
-  --fg: #f4efe6;
-  --accent: #c4a574;
-  --display: "Cormorant Garamond", Georgia, serif;
-  --body: "Source Sans 3", system-ui, sans-serif;
+
+:root { --bg:#0c0b0a; --fg:#f4efe6; --accent:#c4a574; --unit:1.15rem; }
+* { box-sizing:border-box; margin:0; padding:0; }
+html,body { background:var(--bg); color:var(--fg); font-family:"Source Sans 3",sans-serif; }
+a { color:inherit; }
+.top {
+  display:flex; justify-content:space-between; align-items:center;
+  padding: calc(var(--unit)*1.1) calc(var(--unit)*1.6);
+  border-bottom:1px solid color-mix(in srgb, var(--fg) 12%, transparent);
 }
-* { box-sizing: border-box; margin: 0; padding: 0; }
-html, body { min-height: 100%; background: var(--bg); color: var(--fg); font-family: var(--body); }
-a { color: inherit; text-decoration: none; }
-.brand { font-family: var(--display); letter-spacing: 0.02em; }
-h1 { font-family: var(--display); font-weight: 500; line-height: 1.05; }
-.sub { opacity: 0.78; max-width: 36rem; line-height: 1.55; }
+.brand { font-family:"Cormorant Garamond",serif; font-size:1.35rem; letter-spacing:0.01em; }
+.desk { display:flex; gap:calc(var(--unit)*1.4); list-style:none; font-size:0.78rem; opacity:0.65; }
+.desk a { text-decoration:none; border-bottom:1px solid transparent; }
+.desk a:hover { border-bottom-color:var(--accent); }
+.mobile { display:none; font-size:0.72rem; letter-spacing:0.14em; text-transform:uppercase; opacity:0.7; text-decoration:none; }
+@media (max-width:720px){ .desk{display:none;} .mobile{display:inline;} }
+.hero {
+  min-height: calc(100vh - 4rem);
+  display:flex; flex-direction:column; justify-content:flex-end;
+  padding: 0 8vw calc(var(--unit)*5);
+  background:
+    radial-gradient(ellipse 70% 55% at 72% 18%, color-mix(in srgb, var(--accent) 16%, transparent), transparent 62%),
+    linear-gradient(180deg, transparent 35%, #070605 100%);
+}
+.eyebrow { font-size:0.68rem; letter-spacing:0.22em; text-transform:uppercase; opacity:0.5; margin-bottom:calc(var(--unit)*1.4); }
+h1 {
+  font-family:"Cormorant Garamond",serif; font-weight:400;
+  font-size:clamp(3.4rem, 9.5vw, 7.2rem); line-height:0.95; max-width:11ch;
+}
+.rule { width:3.25rem; height:1px; background:var(--accent); margin:calc(var(--unit)*1.35) 0; }
+.lede { max-width:34rem; font-size:1.05rem; line-height:1.65; opacity:0.78; }
 .cta {
-  display: inline-flex; align-items: center; gap: 0.6rem;
-  margin-top: 1.75rem; padding: 0.9rem 1.35rem;
-  border: 1px solid color-mix(in srgb, var(--fg) 35%, transparent);
-  font-size: 0.85rem; letter-spacing: 0.06em; text-transform: uppercase;
-  transition: background 0.25s, color 0.25s;
+  margin-top:calc(var(--unit)*1.8); align-self:flex-start;
+  font-size:0.8rem; letter-spacing:0.08em; text-transform:uppercase;
+  text-decoration:none; color:var(--accent);
+  border-bottom:1px solid color-mix(in srgb, var(--accent) 55%, transparent);
+  padding-bottom:0.25rem;
 }
-.cta:hover { background: var(--fg); color: var(--bg); }
-.tag { font-size: 0.72rem; letter-spacing: 0.18em; text-transform: uppercase; opacity: 0.55; }
-nav {
-  display: flex; justify-content: space-between; align-items: baseline;
-  padding: 1.4rem 2rem; position: relative; z-index: 2;
+.proof {
+  display:grid; grid-template-columns:repeat(3,1fr); gap:1px;
+  background: color-mix(in srgb, var(--fg) 12%, transparent);
+  border-top:1px solid color-mix(in srgb, var(--fg) 12%, transparent);
 }
-nav ul { display: flex; gap: 1.5rem; list-style: none; font-size: 0.8rem; opacity: 0.7; }
-@media (max-width: 720px) { nav ul { display: none; } }
+.proof article { background:var(--bg); padding:calc(var(--unit)*1.6) calc(var(--unit)*1.4); }
+.proof h2 { font-family:"Cormorant Garamond",serif; font-weight:400; font-size:1.35rem; margin-bottom:0.5rem; }
+.proof p { font-size:0.88rem; line-height:1.55; opacity:0.65; }
+@media (max-width:720px){ .proof{grid-template-columns:1fr;} }
+footer { padding:calc(var(--unit)*1.4) calc(var(--unit)*1.6); font-size:0.72rem; opacity:0.4; }
 
-.hero { min-height: 100vh; display: flex; flex-direction: column; justify-content: flex-end; padding: 0 8vw 12vh; background:
-  radial-gradient(ellipse 80% 60% at 70% 20%, color-mix(in srgb, var(--accent) 18%, transparent), transparent 60%),
-  linear-gradient(180deg, transparent 40%, color-mix(in srgb, var(--bg) 80%, black) 100%), var(--bg); }
-h1 { font-size: clamp(3.2rem, 9vw, 7rem); max-width: 14ch; }
-.accent-rule { width: 4rem; height: 2px; background: var(--accent); margin: 1.5rem 0; }
-.plane { position: absolute; inset: 0; background: linear-gradient(115deg, transparent 40%, color-mix(in srgb, var(--accent) 8%, transparent) 100%); pointer-events: none; }
-
-.hero-visual {
-  display: block;
-  width: min(92vw, 1100px);
-  height: auto;
-  margin: 1.5rem 0 0;
-  object-fit: cover;
-  max-height: 42vh;
-}
 </style>
 </head>
 <body>
 
-<nav>
+<header class="top">
   <div class="brand">Ashcroft & Vale</div>
-  <ul><li>Work</li><li>People</li><li>Insights</li><li>Contact</li></ul>
-</nav>
-<div class="plane"></div>
+  <ul class="desk"><li><a href="#work">Matters</a></li><li><a href="#people">Partners</a></li><li><a href="#contact">Contact</a></li></ul>
+  <a class="mobile" href="#contact">Contact</a>
+</header>
 <section class="hero">
-  <p class="tag">Litigation · London</p>
+  <p class="eyebrow">Litigation · London</p>
   <h1>Cases that redefine markets.</h1>
-<img class="hero-visual" src="../assets/01.svg" width="1600" height="1000" alt="Hero atmosphere for variant 01" />
-
-  <div class="accent-rule"></div>
-  <p class="sub">Trial-ready counsel for institutions that cannot afford ambiguity.</p>
-  <a class="cta" href="#">Request a confidential briefing</a>
+  <div class="rule" aria-hidden="true"></div>
+  <p class="lede">Trial-ready counsel for institutions that cannot afford ambiguity.</p>
+  <a class="cta" href="#contact">Request a confidential briefing</a>
 </section>
+<section class="proof" id="work">
+  <article><h2>Market definition</h2><p>Precedent-setting commercial trials for institutions at inflection.</p></article>
+  <article><h2>Board confidence</h2><p>Briefings written for people who must decide under scrutiny.</p></article>
+  <article><h2>Quiet urgency</h2><p>Speed without spectacle — the work stays inside the room.</p></article>
+</section>
+<footer id="contact">© Ashcroft & Vale · Partner line on request</footer>
+
 </body>
 </html>

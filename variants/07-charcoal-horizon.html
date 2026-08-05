@@ -3,68 +3,70 @@
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Northbridge LLP — Taste wall 07-charcoal-horizon</title>
+<title>Northbridge LLP — 07-charcoal-horizon</title>
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link href="https://fonts.googleapis.com/css2?family=Manrope|Instrument+Serif:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:wght@400;500;600;700&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet" />
 <style>
-:root {
-  --bg: #1c1c1c;
-  --fg: #eceae4;
-  --accent: #d4a84b;
-  --display: "Instrument Serif", Georgia, serif;
-  --body: "Manrope", system-ui, sans-serif;
-}
-* { box-sizing: border-box; margin: 0; padding: 0; }
-html, body { min-height: 100%; background: var(--bg); color: var(--fg); font-family: var(--body); }
-a { color: inherit; text-decoration: none; }
-.brand { font-family: var(--display); letter-spacing: 0.02em; }
-h1 { font-family: var(--display); font-weight: 500; line-height: 1.05; }
-.sub { opacity: 0.78; max-width: 36rem; line-height: 1.55; }
-.cta {
-  display: inline-flex; align-items: center; gap: 0.6rem;
-  margin-top: 1.75rem; padding: 0.9rem 1.35rem;
-  border: 1px solid color-mix(in srgb, var(--fg) 35%, transparent);
-  font-size: 0.85rem; letter-spacing: 0.06em; text-transform: uppercase;
-  transition: background 0.25s, color 0.25s;
-}
-.cta:hover { background: var(--fg); color: var(--bg); }
-.tag { font-size: 0.72rem; letter-spacing: 0.18em; text-transform: uppercase; opacity: 0.55; }
-nav {
-  display: flex; justify-content: space-between; align-items: baseline;
-  padding: 1.4rem 2rem; position: relative; z-index: 2;
-}
-nav ul { display: flex; gap: 1.5rem; list-style: none; font-size: 0.8rem; opacity: 0.7; }
-@media (max-width: 720px) { nav ul { display: none; } }
 
-.hero { min-height: 100vh; display: flex; flex-direction: column; justify-content: flex-end; padding: 0 6vw 10vh;
-  background: linear-gradient(180deg, #2a2a2a 0%, #1c1c1c 40%, #0e0e0e 100%); position: relative; overflow: hidden; }
-.hero::before { content: ""; position: absolute; left: -10%; right: -10%; bottom: 22%; height: 1px; background: var(--accent); opacity: 0.5; }
-h1 { font-size: clamp(2.8rem, 6vw, 5rem); max-width: 15ch; position: relative; }
-
-.hero-visual {
-  display: block;
-  width: min(92vw, 1100px);
-  height: auto;
-  margin: 1.5rem 0 0;
-  object-fit: cover;
-  max-height: 42vh;
+:root { --bg:#1c1c1c; --fg:#eceae4; --gold:#d4a84b; --s:1.2rem; }
+* { box-sizing:border-box; margin:0; padding:0; }
+body { background:var(--bg); color:var(--fg); font-family:Manrope,sans-serif; }
+a { color:inherit; text-decoration:none; }
+.nav {
+  display:flex; justify-content:space-between; padding:calc(var(--s)*1) calc(var(--s)*1.5);
+  font-size:0.8rem;
 }
+.brand { font-family:"Instrument Serif",serif; font-size:1.3rem; }
+.nav ul { display:flex; gap:1.3rem; list-style:none; opacity:0.65; }
+@media (max-width:700px){ .nav ul li:not(.solo){display:none;} }
+.hero {
+  min-height:72vh; display:flex; flex-direction:column; justify-content:flex-end;
+  padding: 0 6vw calc(var(--s)*3); position:relative; overflow:hidden;
+  background: linear-gradient(180deg,#2a2a2a 0%,#1c1c1c 48%,#0e0e0e 100%);
+}
+.hero::before {
+  content:""; position:absolute; left:-8%; right:-8%; bottom:28%;
+  height:1px; background:var(--gold); opacity:0.55;
+}
+.tag { font-size:0.7rem; letter-spacing:0.18em; text-transform:uppercase; opacity:0.5; position:relative; }
+h1 { font-family:"Instrument Serif",serif; font-weight:400; font-size:clamp(2.6rem,6vw,4.8rem); line-height:1.05; max-width:15ch; margin-top:calc(var(--s)*0.8); position:relative; }
+.sub { margin-top:calc(var(--s)*1); max-width:34rem; line-height:1.6; opacity:0.75; position:relative; }
+.band {
+  display:flex; justify-content:space-between; align-items:center; gap:1rem; flex-wrap:wrap;
+  background:var(--gold); color:#1c1c1c;
+  padding: calc(var(--s)*1) 6vw; font-weight:600;
+}
+.band a { background:#1c1c1c; color:var(--gold); padding:0.65rem 1.1rem; font-size:0.8rem; }
+.foot {
+  display:grid; grid-template-columns:2fr 1fr 1fr; gap:2rem;
+  padding: calc(var(--s)*2) 6vw; font-size:0.88rem; opacity:0.75;
+}
+@media (max-width:800px){ .foot{grid-template-columns:1fr;} }
+.foot h2 { font-family:"Instrument Serif",serif; font-weight:400; font-size:1.2rem; margin-bottom:0.4rem; color:var(--gold); opacity:1; }
+
 </style>
 </head>
 <body>
 
-<nav>
+<header class="nav">
   <div class="brand">Northbridge LLP</div>
-  <ul><li>Work</li><li>People</li><li>Insights</li><li>Contact</li></ul>
-</nav>
+  <ul><li><a href="#energy">Energy</a></li><li><a href="#projects">Projects</a></li><li class="solo"><a href="#contact">Talk</a></li></ul>
+</header>
 <section class="hero">
   <p class="tag">Energy · Houston</p>
-  <h1 style="margin-top:1rem">Counsel for the next energy map.</h1>
-<img class="hero-visual" src="../assets/07.svg" width="1600" height="1000" alt="Hero atmosphere for variant 07" />
-
-  <p class="sub" style="margin-top:1.2rem">Projects, financing, and disputes across the energy value chain.</p>
-  <a class="cta" href="#">Talk to our projects team</a>
+  <h1>Counsel for the next energy map.</h1>
+  <p class="sub">Projects, financing, and disputes across the energy value chain.</p>
 </section>
+<div class="band" id="contact">
+  <span>Projects team standing by for live deals.</span>
+  <a href="#contact">Talk to our projects team</a>
+</div>
+<section class="foot" id="energy">
+  <div><h2>Value chain</h2><p>Upstream through offtake — one desk that speaks the full map.</p></div>
+  <div id="projects"><h2>Financing</h2><p>Project finance with institutional stamina.</p></div>
+  <div><h2>Disputes</h2><p>When maps contest each other.</p></div>
+</section>
+
 </body>
 </html>

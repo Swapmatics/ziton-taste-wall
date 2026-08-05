@@ -3,70 +3,70 @@
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Pembroke Legacy — Taste wall 20-heritage-stair</title>
+<title>Pembroke Legacy — 20-heritage-stair</title>
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link href="https://fonts.googleapis.com/css2?family=Cabin|EB+Garamond:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;500;600;700&family=Cabin:wght@400;500;600;700&display=swap" rel="stylesheet" />
 <style>
-:root {
-  --bg: #ebe4d6;
-  --fg: #1a1510;
-  --accent: #5c2e1a;
-  --display: "EB Garamond", Georgia, serif;
-  --body: "Cabin", system-ui, sans-serif;
+
+:root { --bg:#ebe4d6; --fg:#1a1510; --wine:#5c2e1a; --s:1.2rem; }
+* { box-sizing:border-box; margin:0; padding:0; }
+body { background:var(--bg); color:var(--fg); font-family:Cabin,sans-serif; }
+a { color:inherit; text-decoration:none; }
+.nav {
+  display:flex; justify-content:center; gap:1.5rem; padding:calc(var(--s)*1) calc(var(--s)*1.2);
+  font-size:0.78rem; letter-spacing:0.08em; text-transform:uppercase; border-bottom:1px solid color-mix(in srgb, var(--fg) 15%, transparent);
 }
-* { box-sizing: border-box; margin: 0; padding: 0; }
-html, body { min-height: 100%; background: var(--bg); color: var(--fg); font-family: var(--body); }
-a { color: inherit; text-decoration: none; }
-.brand { font-family: var(--display); letter-spacing: 0.02em; }
-h1 { font-family: var(--display); font-weight: 500; line-height: 1.05; }
-.sub { opacity: 0.78; max-width: 36rem; line-height: 1.55; }
+.nav .brand { font-family:"EB Garamond",serif; font-size:1.15rem; letter-spacing:0; text-transform:none; margin-right:auto; }
+@media (max-width:700px){
+  .nav { justify-content:space-between; }
+  .nav a:not(.keep){display:none;}
+}
+.hero {
+  min-height:72vh; display:flex; flex-direction:column; align-items:center; justify-content:flex-end;
+  text-align:center; padding: 0 7vw 8vh;
+}
+.steps { width:min(42vw,260px); display:flex; flex-direction:column; gap:0.35rem; margin-bottom:1.6rem; }
+.steps i { display:block; height:7px; background:color-mix(in srgb, var(--wine) 42%, transparent); margin-left:auto; margin-right:auto; }
+.steps i:nth-child(1){width:38%;} .steps i:nth-child(2){width:62%;} .steps i:nth-child(3){width:100%;}
+.tag { font-size:0.7rem; letter-spacing:0.16em; text-transform:uppercase; opacity:0.55; }
+h1 { font-family:"EB Garamond",serif; font-weight:500; font-size:clamp(2.5rem,5.5vw,4.2rem); line-height:1.1; max-width:14ch; margin-top:0.7rem; }
+.sub { margin-top:1rem; max-width:34rem; line-height:1.65; opacity:0.8; }
 .cta {
-  display: inline-flex; align-items: center; gap: 0.6rem;
-  margin-top: 1.75rem; padding: 0.9rem 1.35rem;
-  border: 1px solid color-mix(in srgb, var(--fg) 35%, transparent);
-  font-size: 0.85rem; letter-spacing: 0.06em; text-transform: uppercase;
-  transition: background 0.25s, color 0.25s;
+  margin-top:1.5rem;
+  font-family:"EB Garamond",serif; font-size:1.05rem; color:var(--wine);
+  border-bottom:1px solid color-mix(in srgb, var(--wine) 50%, transparent); padding-bottom:0.15rem;
 }
-.cta:hover { background: var(--fg); color: var(--bg); }
-.tag { font-size: 0.72rem; letter-spacing: 0.18em; text-transform: uppercase; opacity: 0.55; }
-nav {
-  display: flex; justify-content: space-between; align-items: baseline;
-  padding: 1.4rem 2rem; position: relative; z-index: 2;
+.reg {
+  display:grid; grid-template-columns:1fr 1fr 1fr; gap:1rem;
+  padding: calc(var(--s)*1.4) 7vw; border-top:1px solid color-mix(in srgb, var(--fg) 15%, transparent);
+  text-align:center; font-size:0.85rem;
 }
-nav ul { display: flex; gap: 1.5rem; list-style: none; font-size: 0.8rem; opacity: 0.7; }
-@media (max-width: 720px) { nav ul { display: none; } }
+.reg strong { display:block; font-family:"EB Garamond",serif; font-size:1.15rem; margin-bottom:0.3rem; }
+@media (max-width:700px){ .reg{grid-template-columns:1fr;} }
 
-.hero { min-height: 100vh; padding: 0 7vw 8vh; display: flex; flex-direction: column; justify-content: flex-end; }
-.steps { display: flex; flex-direction: column; gap: 0.35rem; margin-bottom: 2rem; width: min(40vw, 280px); }
-.steps i { display: block; height: 8px; background: color-mix(in srgb, var(--accent) 45%, transparent); }
-.steps i:nth-child(1) { width: 40%; } .steps i:nth-child(2) { width: 65%; } .steps i:nth-child(3) { width: 100%; }
-h1 { font-size: clamp(2.6rem, 5.5vw, 4.5rem); max-width: 14ch; }
-
-.hero-visual {
-  display: block;
-  width: min(92vw, 1100px);
-  height: auto;
-  margin: 1.5rem 0 0;
-  object-fit: cover;
-  max-height: 42vh;
-}
 </style>
 </head>
 <body>
 
-<nav>
+<header class="nav">
   <div class="brand">Pembroke Legacy</div>
-  <ul><li>Work</li><li>People</li><li>Insights</li><li>Contact</li></ul>
-</nav>
+  <a href="#succession">Succession</a>
+  <a href="#cross">Cross-border</a>
+  <a class="keep" href="#contact">Chambers</a>
+</header>
 <section class="hero">
   <div class="steps" aria-hidden="true"><i></i><i></i><i></i></div>
   <p class="tag">Estates · Edinburgh</p>
-  <h1 style="margin-top:0.8rem">Inheritance, handled with gravity.</h1>
-<img class="hero-visual" src="../assets/20.svg" width="1600" height="1000" alt="Hero atmosphere for variant 20" />
-
-  <p class="sub" style="margin-top:1.2rem">Scottish and cross-border succession for families with complexity.</p>
-  <a class="cta" href="#">Book a chamber visit</a>
+  <h1>Inheritance, handled with gravity.</h1>
+  <p class="sub">Scottish and cross-border succession for families with complexity.</p>
+  <a class="cta" href="#contact">Book a chamber visit</a>
 </section>
+<section class="reg">
+  <div id="succession"><strong>Succession</strong>Wills with jurisdictional discipline</div>
+  <div id="cross"><strong>Cross-border</strong>Scottish roots, wider holdings</div>
+  <div id="contact"><strong>Chambers</strong>Visit by appointment</div>
+</section>
+
 </body>
 </html>
