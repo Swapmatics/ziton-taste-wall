@@ -43,6 +43,15 @@ nav ul { display: flex; gap: 1.5rem; list-style: none; font-size: 0.8rem; opacit
 h1 { font-size: clamp(2.8rem, 6vw, 5rem); max-width: 16ch; }
 .frame { position: absolute; top: 18%; right: 8%; width: min(38vw, 420px); aspect-ratio: 3/4;
   border: 1px solid color-mix(in srgb, var(--fg) 25%, transparent); background: color-mix(in srgb, var(--bg) 30%, transparent); }
+
+.hero-visual {
+  display: block;
+  width: min(92vw, 1100px);
+  height: auto;
+  margin: 1.5rem 0 0;
+  object-fit: cover;
+  max-height: 42vh;
+}
 </style>
 </head>
 <body>
@@ -55,6 +64,8 @@ h1 { font-size: clamp(2.8rem, 6vw, 5rem); max-width: 16ch; }
 <section class="hero">
   <p class="tag">Disputes · Chicago</p>
   <h1>When the room needs composure.</h1>
+<img class="hero-visual" src="../assets/03.svg" width="1600" height="1000" alt="Hero atmosphere for variant 03" />
+
   <p class="sub">Complex commercial disputes handled with discipline and calm.</p>
   <a class="cta" href="#">Schedule a consultation</a>
 </section>

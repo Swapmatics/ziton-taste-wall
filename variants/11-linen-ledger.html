@@ -40,6 +40,15 @@ nav ul { display: flex; gap: 1.5rem; list-style: none; font-size: 0.8rem; opacit
 .hero { min-height: 100vh; padding: 0 7vw 8vh; display: flex; flex-direction: column; justify-content: center;
   background: repeating-linear-gradient(0deg, transparent, transparent 31px, color-mix(in srgb, var(--fg) 6%, transparent) 32px), var(--bg); }
 h1 { font-size: clamp(2.8rem, 6vw, 5rem); max-width: 12ch; background: var(--bg); display: inline; box-decoration-break: clone; -webkit-box-decoration-break: clone; padding: 0.1em 0; }
+
+.hero-visual {
+  display: block;
+  width: min(92vw, 1100px);
+  height: auto;
+  margin: 1.5rem 0 0;
+  object-fit: cover;
+  max-height: 42vh;
+}
 </style>
 </head>
 <body>
@@ -51,6 +60,8 @@ h1 { font-size: clamp(2.8rem, 6vw, 5rem); max-width: 12ch; background: var(--bg)
 <section class="hero">
   <p class="tag">Real estate · Dallas</p>
   <h1 style="margin-top:1rem">Land, capital, permanence.</h1>
+<img class="hero-visual" src="../assets/11.svg" width="1600" height="1000" alt="Hero atmosphere for variant 11" />
+
   <p class="sub" style="margin-top:1.4rem;background:var(--bg);padding:0.4rem 0">Development and investment counsel for people who build for decades.</p>
   <a class="cta" href="#">Discuss a project</a>
 </section>

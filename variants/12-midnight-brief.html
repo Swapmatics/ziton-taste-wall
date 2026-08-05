@@ -40,6 +40,15 @@ nav ul { display: flex; gap: 1.5rem; list-style: none; font-size: 0.8rem; opacit
 .hero { min-height: 100vh; padding: 0 6vw; display: flex; flex-direction: column; justify-content: center; }
 h1 { font-size: clamp(2.6rem, 5.5vw, 4.5rem); max-width: 14ch; }
 .status { color: var(--accent); font-size: 0.75rem; letter-spacing: 0.2em; text-transform: uppercase; margin-bottom: 1.2rem; }
+
+.hero-visual {
+  display: block;
+  width: min(92vw, 1100px);
+  height: auto;
+  margin: 1.5rem 0 0;
+  object-fit: cover;
+  max-height: 42vh;
+}
 </style>
 </head>
 <body>
@@ -51,6 +60,8 @@ h1 { font-size: clamp(2.6rem, 5.5vw, 4.5rem); max-width: 14ch; }
 <section class="hero">
   <p class="status">● On call · Crisis · London</p>
   <h1>Available when the story breaks.</h1>
+<img class="hero-visual" src="../assets/12.svg" width="1600" height="1000" alt="Hero atmosphere for variant 12" />
+
   <p class="sub" style="margin-top:1.2rem">Crisis, reputation, and emergency injunction work — night or day.</p>
   <a class="cta" href="#">24/7 partner line</a>
 </section>

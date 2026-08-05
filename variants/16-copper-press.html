@@ -40,6 +40,15 @@ nav ul { display: flex; gap: 1.5rem; list-style: none; font-size: 0.8rem; opacit
 .hero { min-height: 100vh; max-width: 900px; margin: 0 auto; padding: 4rem 2rem 6rem; display: flex; flex-direction: column; justify-content: center; }
 h1 { font-size: clamp(2.4rem, 4.5vw, 3.6rem); max-width: 18ch; }
 .drop { float: left; font-family: var(--display); font-size: 5rem; line-height: 0.8; color: var(--accent); margin-right: 0.15em; }
+
+.hero-visual {
+  display: block;
+  width: min(92vw, 1100px);
+  height: auto;
+  margin: 1.5rem 0 0;
+  object-fit: cover;
+  max-height: 42vh;
+}
 </style>
 </head>
 <body>
@@ -51,6 +60,8 @@ h1 { font-size: clamp(2.4rem, 4.5vw, 3.6rem); max-width: 18ch; }
 <section class="hero">
   <p class="tag">Media · Toronto</p>
   <h1 style="margin-top:1.2rem"><span class="drop">P</span>ublishers under pressure, advised.</h1>
+<img class="hero-visual" src="../assets/16.svg" width="1600" height="1000" alt="Hero atmosphere for variant 16" />
+
   <p class="sub" style="margin-top:1.5rem;clear:both">Defamation, privacy, and content liability for serious newsrooms.</p>
   <a class="cta" href="#">Send a brief</a>
 </section>

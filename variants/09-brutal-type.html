@@ -41,6 +41,15 @@ nav ul { display: flex; gap: 1.5rem; list-style: none; font-size: 0.8rem; opacit
 h1 { font-size: clamp(3rem, 10vw, 8rem); text-transform: uppercase; letter-spacing: -0.03em; max-width: 10ch; }
 .stamp { display: inline-block; background: var(--accent); color: #fff; padding: 0.35rem 0.7rem; font-size: 0.7rem; letter-spacing: 0.15em; text-transform: uppercase; margin-bottom: 1rem; }
 .cta { border-width: 2px; font-weight: 700; }
+
+.hero-visual {
+  display: block;
+  width: min(92vw, 1100px);
+  height: auto;
+  margin: 1.5rem 0 0;
+  object-fit: cover;
+  max-height: 42vh;
+}
 </style>
 </head>
 <body>
@@ -52,6 +61,8 @@ h1 { font-size: clamp(3rem, 10vw, 8rem); text-transform: uppercase; letter-spaci
 <section class="hero">
   <span class="stamp">Plaintiff · San Francisco</span>
   <h1>We don't soft-pedal.</h1>
+<img class="hero-visual" src="../assets/09.svg" width="1600" height="1000" alt="Hero atmosphere for variant 09" />
+
   <p class="sub" style="margin-top:1.2rem;font-size:1.15rem">High-stakes plaintiff advocacy with visceral storytelling for juries.</p>
   <a class="cta" href="#">Evaluate your case</a>
 </section>

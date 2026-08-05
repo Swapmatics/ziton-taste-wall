@@ -41,6 +41,15 @@ nav ul { display: flex; gap: 1.5rem; list-style: none; font-size: 0.8rem; opacit
   background: linear-gradient(180deg, #2a2a2a 0%, #1c1c1c 40%, #0e0e0e 100%); position: relative; overflow: hidden; }
 .hero::before { content: ""; position: absolute; left: -10%; right: -10%; bottom: 22%; height: 1px; background: var(--accent); opacity: 0.5; }
 h1 { font-size: clamp(2.8rem, 6vw, 5rem); max-width: 15ch; position: relative; }
+
+.hero-visual {
+  display: block;
+  width: min(92vw, 1100px);
+  height: auto;
+  margin: 1.5rem 0 0;
+  object-fit: cover;
+  max-height: 42vh;
+}
 </style>
 </head>
 <body>
@@ -52,6 +61,8 @@ h1 { font-size: clamp(2.8rem, 6vw, 5rem); max-width: 15ch; position: relative; }
 <section class="hero">
   <p class="tag">Energy · Houston</p>
   <h1 style="margin-top:1rem">Counsel for the next energy map.</h1>
+<img class="hero-visual" src="../assets/07.svg" width="1600" height="1000" alt="Hero atmosphere for variant 07" />
+
   <p class="sub" style="margin-top:1.2rem">Projects, financing, and disputes across the energy value chain.</p>
   <a class="cta" href="#">Talk to our projects team</a>
 </section>

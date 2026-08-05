@@ -42,6 +42,15 @@ nav ul { display: flex; gap: 1.5rem; list-style: none; font-size: 0.8rem; opacit
   font-size: 0.7rem; letter-spacing: 0.25em; text-transform: uppercase; opacity: 0.45; text-align: center; }
 .main { padding: 4rem 6vw; display: flex; flex-direction: column; justify-content: center; }
 h1 { font-size: clamp(2.6rem, 5vw, 4.6rem); max-width: 14ch; border-left: 3px solid var(--accent); padding-left: 1.2rem; }
+
+.hero-visual {
+  display: block;
+  width: min(92vw, 1100px);
+  height: auto;
+  margin: 1.5rem 0 0;
+  object-fit: cover;
+  max-height: 42vh;
+}
 </style>
 </head>
 <body>
@@ -54,6 +63,8 @@ h1 { font-size: clamp(2.6rem, 5vw, 4.6rem); max-width: 14ch; border-left: 3px so
   <div class="rail">Investigations · DC</div>
   <div class="main">
     <h1>Facts, sequenced. Risk, contained.</h1>
+<img class="hero-visual" src="../assets/06.svg" width="1600" height="1000" alt="Hero atmosphere for variant 06" />
+
     <p class="sub" style="margin-top:1.4rem">Regulatory investigations for companies under real pressure.</p>
     <a class="cta" href="#">Open a matter</a>
   </div>

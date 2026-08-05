@@ -43,6 +43,15 @@ nav ul { display: flex; gap: 1.5rem; list-style: none; font-size: 0.8rem; opacit
 h1 { font-size: clamp(3.2rem, 9vw, 7rem); max-width: 14ch; }
 .accent-rule { width: 4rem; height: 2px; background: var(--accent); margin: 1.5rem 0; }
 .plane { position: absolute; inset: 0; background: linear-gradient(115deg, transparent 40%, color-mix(in srgb, var(--accent) 8%, transparent) 100%); pointer-events: none; }
+
+.hero-visual {
+  display: block;
+  width: min(92vw, 1100px);
+  height: auto;
+  margin: 1.5rem 0 0;
+  object-fit: cover;
+  max-height: 42vh;
+}
 </style>
 </head>
 <body>
@@ -55,6 +64,8 @@ h1 { font-size: clamp(3.2rem, 9vw, 7rem); max-width: 14ch; }
 <section class="hero">
   <p class="tag">Litigation · London</p>
   <h1>Cases that redefine markets.</h1>
+<img class="hero-visual" src="../assets/01.svg" width="1600" height="1000" alt="Hero atmosphere for variant 01" />
+
   <div class="accent-rule"></div>
   <p class="sub">Trial-ready counsel for institutions that cannot afford ambiguity.</p>
   <a class="cta" href="#">Request a confidential briefing</a>

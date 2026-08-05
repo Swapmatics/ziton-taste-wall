@@ -42,6 +42,15 @@ nav ul { display: flex; gap: 1.5rem; list-style: none; font-size: 0.8rem; opacit
 h1 { font-size: clamp(2.6rem, 5.5vw, 4.8rem); max-width: 13ch; }
 .chip { font-size: 0.75rem; opacity: 0.6; font-family: var(--body); }
 .gridline { height: 1px; width: min(60vw, 520px); background: linear-gradient(90deg, var(--accent), transparent); }
+
+.hero-visual {
+  display: block;
+  width: min(92vw, 1100px);
+  height: auto;
+  margin: 1.5rem 0 0;
+  object-fit: cover;
+  max-height: 42vh;
+}
 </style>
 </head>
 <body>
@@ -54,6 +63,8 @@ h1 { font-size: clamp(2.6rem, 5.5vw, 4.8rem); max-width: 13ch; }
   <p class="chip">Tech · Seattle</p>
   <div class="gridline"></div>
   <h1>Law at the speed of product.</h1>
+<img class="hero-visual" src="../assets/10.svg" width="1600" height="1000" alt="Hero atmosphere for variant 10" />
+
   <p class="sub">IP, privacy, and commercial counsel for companies shipping weekly.</p>
   <a class="cta" href="#">Book founder hours</a>
 </section>

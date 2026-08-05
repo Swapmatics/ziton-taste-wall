@@ -45,6 +45,15 @@ nav ul { display: flex; gap: 1.5rem; list-style: none; font-size: 0.8rem; opacit
   min-height: 40vh; position: relative; }
 .right::after { content: ""; position: absolute; inset: 12% 14%; border: 1px solid color-mix(in srgb, white 25%, transparent); }
 h1 { font-size: clamp(2.6rem, 5.5vw, 4.4rem); max-width: 12ch; }
+
+.hero-visual {
+  display: block;
+  width: min(92vw, 1100px);
+  height: auto;
+  margin: 1.5rem 0 0;
+  object-fit: cover;
+  max-height: 42vh;
+}
 </style>
 </head>
 <body>
@@ -57,6 +66,8 @@ h1 { font-size: clamp(2.6rem, 5.5vw, 4.4rem); max-width: 12ch; }
   <div class="left">
     <p class="tag">Corporate · New York</p>
     <h1 style="margin-top:1rem">Quiet power. Exact counsel.</h1>
+<img class="hero-visual" src="../assets/02.svg" width="1600" height="1000" alt="Hero atmosphere for variant 02" />
+
     <p class="sub" style="margin-top:1.2rem">M&A and governance for boards who prefer precision to noise.</p>
     <a class="cta" href="#">Speak with a partner</a>
   </div>
