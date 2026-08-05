@@ -1,22 +1,24 @@
 # Taste wall technical contract
 
-## CI (required)
+## Deploy gates (live)
 
-GitHub Action: `.github/workflows/taste-wall-contract.yml`
-
-Runs on every push to `main` and every pull request:
+Netlify and Vercel both run:
 
 ```bash
 python3 scripts/validate_taste_wall.py
 ```
 
-A failing gate fails the workflow. Do not merge red.
+as the build command. A failing gate fails the deploy.
+
+## GitHub Actions
+
+Workflow file: `.github/workflows/taste-wall-contract.yml`  
+Runs on every push to `main` and every PR when present on the default branch.
 
 ## Local
 
 ```bash
 python3 scripts/validate_taste_wall.py
-# or
 ./scripts/taste_wall_gate.sh
 ```
 

@@ -1,3 +1,4 @@
 [build]
   publish = "."
-  command = "echo static"
+  # Contract gate — deploy fails if any variant violates validate_taste_wall.py
+  command = "python3 scripts/validate_taste_wall.py"

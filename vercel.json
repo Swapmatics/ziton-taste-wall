@@ -1,4 +1,6 @@
 {
+  "buildCommand": "python3 scripts/validate_taste_wall.py",
+  "outputDirectory": ".",
   "headers": [
     {
       "source": "/(.*)",
