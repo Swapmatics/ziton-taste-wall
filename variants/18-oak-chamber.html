@@ -6,10 +6,20 @@
 <title>Whitaker Chambers — 18-oak-chamber</title>
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Cormorant:wght@400;500;600;700&family=Raleway:wght@400;500;600;700&display=swap" />
 <link href="https://fonts.googleapis.com/css2?family=Cormorant:wght@400;500;600;700&family=Raleway:wght@400;500;600;700&display=swap" rel="stylesheet" />
 <style>
 
-:root { --bg:#2a231c; --fg:#efe6d8; --oak:#b8956c; --s:1.25rem; }
+:root {
+  --bg:#2a231c;
+  --fg:#efe6d8;
+  --oak:#b8956c;
+  --s:1.25rem;
+  --muted: #a0a0a0;
+  --mute: #a0a0a0;
+}
+
+
 * { box-sizing:border-box; margin:0; padding:0; }
 body { background:var(--bg); color:var(--fg); font-family:Raleway,sans-serif; }
 a { color:inherit; text-decoration:none; }
@@ -18,7 +28,7 @@ a { color:inherit; text-decoration:none; }
   border-bottom:1px solid color-mix(in srgb, var(--oak) 35%, transparent);
 }
 .brand { font-family:Cormorant,serif; font-size:1.4rem; font-weight:600; }
-.nav a { font-size:0.75rem; letter-spacing:0.1em; text-transform:uppercase; opacity:0.65; margin-left:1.1rem; }
+.nav a { font-size:0.75rem; letter-spacing:0.1em; text-transform:uppercase; margin-left:1.1rem; }
 @media (max-width:700px){ .nav a:not(.keep){display:none;} }
 .hero {
   min-height:72vh; display:flex; flex-direction:column; align-items:center; justify-content:center; text-align:center;
@@ -30,9 +40,9 @@ a { color:inherit; text-decoration:none; }
   display:grid; place-items:center; margin-bottom:calc(var(--s)*1.2);
   font-family:Cormorant,serif; color:var(--oak); font-size:1.4rem;
 }
-.tag { font-size:0.7rem; letter-spacing:0.2em; text-transform:uppercase; opacity:0.55; }
+.tag { font-size:0.7rem; letter-spacing:0.2em; text-transform:uppercase; }
 h1 { font-family:Cormorant,serif; font-weight:500; font-size:clamp(2.6rem,6vw,4.6rem); line-height:1.08; max-width:14ch; margin-top:0.8rem; }
-.sub { margin-top:1rem; max-width:34rem; line-height:1.65; opacity:0.78; }
+.sub { margin-top:1rem; max-width:34rem; line-height:1.65; }
 .cta {
   margin-top:1.6rem;
   font-size:0.78rem; letter-spacing:0.14em; text-transform:uppercase; color:var(--oak);
@@ -42,18 +52,28 @@ h1 { font-family:Cormorant,serif; font-weight:500; font-size:clamp(2.6rem,6vw,4.
   display:grid; grid-template-columns:1fr 1fr 1fr; gap:1rem;
   padding: calc(var(--s)*1.4) calc(var(--s)*1.5);
   border-top:1px solid color-mix(in srgb, var(--oak) 30%, transparent);
-  font-size:0.82rem; opacity:0.7;
-}
+  font-size:0.82rem; }
 @media (max-width:700px){ .colophon{grid-template-columns:1fr;} }
-.colophon strong { display:block; font-family:Cormorant,serif; font-size:1.1rem; color:var(--oak); opacity:1; margin-bottom:0.35rem; }
+.colophon strong { display:block; font-family:Cormorant,serif; font-size:1.1rem; color:var(--oak); margin-bottom:0.35rem; }
 
+
+/* contract: de-emphasis via --muted, never opacity */
+.tag, .meta, .eyebrow, .kicker, .deck, .chip, .num, .sz, .artist, .byline, .period,
+.coords, .status, .live, .chap, .hole + .num, footer, footer.contact, .addr {
+  color: var(--muted);
+}
+nav a, .nav a, .desk a, .links a, .tabs a:not(.focus):not(.keep):not(.p):not(.on),
+.topnav a, .corners nav a {
+  color: var(--muted);
+}
+nav a:hover, .nav a:hover { color: var(--fg); }
 </style>
 </head>
 <body>
 
 <header class="nav">
   <div class="brand">Whitaker Chambers</div>
-  <nav><a href="#arb">Arbitration</a><a href="#seat">Seat</a><a class="keep" href="#contact">Engage</a></nav>
+  <nav aria-label="Primary"><a href="#arb">Arbitration</a><a href="#seat">Seat</a><a class="keep" href="#contact">Engage</a></nav>
 </header>
 <section class="hero">
   <div class="seal" aria-hidden="true">WC</div>
@@ -65,8 +85,9 @@ h1 { font-family:Cormorant,serif; font-weight:500; font-size:clamp(2.6rem,6vw,4.
 <section class="colophon">
   <div id="arb"><strong>Tribunal</strong>Hard advocacy in sealed rooms</div>
   <div id="seat"><strong>Seat</strong>Geneva and beyond</div>
-  <div id="contact"><strong>Engage</strong>Written introductions preferred</div>
+  <div><strong>Engage</strong>Written introductions preferred</div>
 </section>
 
+<footer id="contact">Partner intake · contact desk</footer>
 </body>
 </html>

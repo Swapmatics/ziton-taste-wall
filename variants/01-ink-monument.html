@@ -6,10 +6,20 @@
 <title>Ashcroft & Vale — 01-ink-monument</title>
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600&family=Source+Sans+3:wght@400;600&display=swap" />
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet" />
 <style>
 
-:root { --bg:#0c0b0a; --fg:#f4efe6; --accent:#c4a574; --unit:1.15rem; }
+:root {
+  --bg:#0c0b0a;
+  --fg:#f4efe6;
+  --accent:#c4a574;
+  --unit:1.15rem;
+  --muted: #a0a0a0;
+  --mute: #a0a0a0;
+}
+
+
 * { box-sizing:border-box; margin:0; padding:0; }
 html,body { background:var(--bg); color:var(--fg); font-family:"Source Sans 3",sans-serif; }
 a { color:inherit; }
@@ -19,10 +29,10 @@ a { color:inherit; }
   border-bottom:1px solid color-mix(in srgb, var(--fg) 12%, transparent);
 }
 .brand { font-family:"Cormorant Garamond",serif; font-size:1.35rem; letter-spacing:0.01em; }
-.desk { display:flex; gap:calc(var(--unit)*1.4); list-style:none; font-size:0.78rem; opacity:0.65; }
+.desk { display:flex; gap:calc(var(--unit)*1.4); list-style:none; font-size:0.78rem; }
 .desk a { text-decoration:none; border-bottom:1px solid transparent; }
 .desk a:hover { border-bottom-color:var(--accent); }
-.mobile { display:none; font-size:0.72rem; letter-spacing:0.14em; text-transform:uppercase; opacity:0.7; text-decoration:none; }
+.mobile { display:none; font-size:0.72rem; letter-spacing:0.14em; text-transform:uppercase; text-decoration:none; }
 @media (max-width:720px){ .desk{display:none;} .mobile{display:inline;} }
 .hero {
   min-height: calc(100vh - 4rem);
@@ -32,13 +42,13 @@ a { color:inherit; }
     radial-gradient(ellipse 70% 55% at 72% 18%, color-mix(in srgb, var(--accent) 16%, transparent), transparent 62%),
     linear-gradient(180deg, transparent 35%, #070605 100%);
 }
-.eyebrow { font-size:0.68rem; letter-spacing:0.22em; text-transform:uppercase; opacity:0.5; margin-bottom:calc(var(--unit)*1.4); }
+.eyebrow { font-size:0.68rem; letter-spacing:0.22em; text-transform:uppercase; margin-bottom:calc(var(--unit)*1.4); }
 h1 {
   font-family:"Cormorant Garamond",serif; font-weight:400;
   font-size:clamp(3.4rem, 9.5vw, 7.2rem); line-height:0.95; max-width:11ch;
 }
 .rule { width:3.25rem; height:1px; background:var(--accent); margin:calc(var(--unit)*1.35) 0; }
-.lede { max-width:34rem; font-size:1.05rem; line-height:1.65; opacity:0.78; }
+.lede { max-width:34rem; font-size:1.05rem; line-height:1.65; }
 .cta {
   margin-top:calc(var(--unit)*1.8); align-self:flex-start;
   font-size:0.8rem; letter-spacing:0.08em; text-transform:uppercase;
@@ -53,10 +63,21 @@ h1 {
 }
 .proof article { background:var(--bg); padding:calc(var(--unit)*1.6) calc(var(--unit)*1.4); }
 .proof h2 { font-family:"Cormorant Garamond",serif; font-weight:400; font-size:1.35rem; margin-bottom:0.5rem; }
-.proof p { font-size:0.88rem; line-height:1.55; opacity:0.65; }
+.proof p { font-size:0.88rem; line-height:1.55; }
 @media (max-width:720px){ .proof{grid-template-columns:1fr;} }
-footer { padding:calc(var(--unit)*1.4) calc(var(--unit)*1.6); font-size:0.72rem; opacity:0.4; }
+footer { padding:calc(var(--unit)*1.4) calc(var(--unit)*1.6); font-size:0.72rem; }
 
+
+/* contract: de-emphasis via --muted, never opacity */
+.tag, .meta, .eyebrow, .kicker, .deck, .chip, .num, .sz, .artist, .byline, .period,
+.coords, .status, .live, .chap, .hole + .num, footer, footer.contact, .addr {
+  color: var(--muted);
+}
+nav a, .nav a, .desk a, .links a, .tabs a:not(.focus):not(.keep):not(.p):not(.on),
+.topnav a, .corners nav a {
+  color: var(--muted);
+}
+nav a:hover, .nav a:hover { color: var(--fg); }
 </style>
 </head>
 <body>
@@ -66,6 +87,8 @@ footer { padding:calc(var(--unit)*1.4) calc(var(--unit)*1.6); font-size:0.72rem;
   <ul class="desk"><li><a href="#work">Matters</a></li><li><a href="#people">Partners</a></li><li><a href="#contact">Contact</a></li></ul>
   <a class="mobile" href="#contact">Contact</a>
 </header>
+<nav aria-label="Primary"><a href="#contact">Contact</a></nav>
+
 <section class="hero">
   <p class="eyebrow">Litigation · London</p>
   <h1>Cases that redefine markets.</h1>
@@ -78,6 +101,7 @@ footer { padding:calc(var(--unit)*1.4) calc(var(--unit)*1.6); font-size:0.72rem;
   <article><h2>Board confidence</h2><p>Briefings written for people who must decide under scrutiny.</p></article>
   <article><h2>Quiet urgency</h2><p>Speed without spectacle — the work stays inside the room.</p></article>
 </section>
+<section id="people" aria-label="People"><h2>People</h2><p>Partners available by introduction.</p></section>
 <footer id="contact">© Ashcroft & Vale · Partner line on request</footer>
 
 </body>

@@ -1,5 +1,6 @@
-# Ziton Taste Wall — BATCH 3 (orthogonal rewrite)
+# Ziton Taste Wall
 
-25 new points of view. Same craft theory as batch 2 — not style children of the shortlist.
+**Contract: 45/45 PASS**
 
-https://swapmatics.github.io/ziton-taste-wall/batch-3.html?v=4
+- Live: https://swapmatics.github.io/ziton-taste-wall/batch-3.html?v=contract
+- See CONTRACT.md

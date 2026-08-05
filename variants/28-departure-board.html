@@ -7,30 +7,51 @@
 <title>Gate Counsel — 28-departure-board</title>
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono:wght@400;500;600;700&family=Archivo:wght@400;500;600;700&display=swap" />
 <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono:wght@400;500;600;700&family=Archivo:wght@400;500;600;700&display=swap" rel="stylesheet" />
 <style>
 
-:root{--bg:#12151a;--fg:#f0f2f5;--amber:#ffb000;--u:1rem}
+:root {
+  --bg:#12151a;
+  --fg:#f0f2f5;
+  --amber:#ffb000;
+  --u:1rem;
+  --muted: #a0a0a0;
+  --mute: #a0a0a0;
+}
+
+
 *{box-sizing:border-box;margin:0;padding:0}body{background:var(--bg);color:var(--fg);font-family:Archivo,sans-serif}
 a{color:inherit;text-decoration:none}
 .nav{display:flex;justify-content:space-between;padding:1rem 1.2rem}
-.brand{font-family:"Share Tech Mono",monospace;color:var(--amber);letter-spacing:.08em}.nav a{font-size:.75rem;opacity:.6}.nav a.keep{opacity:1;color:var(--amber)}
+.brand{font-family:"Share Tech Mono",monospace;color:var(--amber);letter-spacing:.08em}.nav a{font-size:.75rem;color:var(--amber)}
 @media(max-width:700px){.nav a:not(.keep){display:none}}
 .hero{padding:1.5rem 1.2rem}
 .tag{font-family:"Share Tech Mono",monospace;font-size:.72rem;color:var(--amber)}
 h1{font-size:clamp(2rem,4.5vw,3.2rem);font-weight:600;margin-top:.6rem;max-width:16ch;line-height:1.15}
-.sub{margin-top:.9rem;opacity:.75;line-height:1.55;max-width:34rem}
+.sub{margin-top:.9rem;line-height:1.55;max-width:34rem}
 .cta{display:inline-block;margin-top:1.2rem;border:1px solid var(--amber);color:var(--amber);font-family:"Share Tech Mono",monospace;font-size:.75rem;padding:.55rem .85rem;letter-spacing:.06em}
 .board{margin-top:2rem;font-family:"Share Tech Mono",monospace;font-size:.85rem}
 .board .row{display:grid;grid-template-columns:4rem 1fr 5rem 5rem;gap:.75rem;padding:.7rem 1.2rem;border-top:1px solid #2a3038;background:#0e1115}
 .board .row.head{color:var(--amber);font-size:.7rem;letter-spacing:.08em;background:transparent}
 @media(max-width:700px){.board .row{grid-template-columns:3rem 1fr 4rem;font-size:.75rem}.board .row span:last-child{display:none}}
 
+
+/* contract: de-emphasis via --muted, never opacity */
+.tag, .meta, .eyebrow, .kicker, .deck, .chip, .num, .sz, .artist, .byline, .period,
+.coords, .status, .live, .chap, .hole + .num, footer, footer.contact, .addr {
+  color: var(--muted);
+}
+nav a, .nav a, .desk a, .links a, .tabs a:not(.focus):not(.keep):not(.p):not(.on),
+.topnav a, .corners nav a {
+  color: var(--muted);
+}
+nav a:hover, .nav a:hover { color: var(--fg); }
 </style>
 </head>
 <body>
 
-<header class="nav"><div class="brand">Gate Counsel</div><nav><a href="#flights">Board</a><a class="keep" href="#contact">Hold</a></nav></header>
+<header class="nav"><div class="brand">Gate Counsel</div><nav aria-label="Primary"><a href="#flights">Board</a><a class="keep" href="#contact">Hold</a></nav></header>
 <section class="hero">
   <p class="tag">AVIATION · DUBAI</p>
   <h1>On time is a legal condition.</h1>
@@ -41,8 +62,9 @@ h1{font-size:clamp(2rem,4.5vw,3.2rem);font-weight:600;margin-top:.6rem;max-width
   <div class="row head"><span>CODE</span><span>MATTER</span><span>STATUS</span><span>GATE</span></div>
   <div class="row"><span>CVR</span><span>Wet lease dispute</span><span>LIVE</span><span>A12</span></div>
   <div class="row"><span>SLO</span><span>Slot coordination</span><span>HOLD</span><span>B04</span></div>
-  <div class="row" id="contact"><span>INT</span><span>Partner intake</span><span>OPEN</span><span>NOW</span></div>
+  <div class="row"><span>INT</span><span>Partner intake</span><span>OPEN</span><span>NOW</span></div>
 </section>
 
+<footer id="contact">Partner intake · contact desk</footer>
 </body>
 </html>

@@ -6,10 +6,20 @@
 <title>Ellison Rowe — 02-parchment-authority</title>
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;600;700&family=IBM+Plex+Sans:wght@400;600;700&display=swap" />
 <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;600;700&family=IBM+Plex+Sans:wght@400;600;700&display=swap" rel="stylesheet" />
 <style>
 
-:root { --bg:#f3eadc; --ink:#1a1916; --navy:#1e3a5f; --space:1.25rem; }
+:root {
+  --bg:#f3eadc;
+  --ink:#1a1916;
+  --navy:#1e3a5f;
+  --space:1.25rem;
+  --muted: #666666;
+  --mute: #666666;
+}
+
+
 * { box-sizing:border-box; margin:0; padding:0; }
 body { background:var(--bg); color:var(--ink); font-family:"IBM Plex Sans",sans-serif; }
 a { color:inherit; }
@@ -40,7 +50,7 @@ h1 { font-family:"Libre Baskerville",serif; font-weight:700; font-size:clamp(2.2
   padding: calc(var(--space)*2);
   min-height:38vh;
 }
-.right .num { font-family:"Libre Baskerville",serif; font-size:4.5rem; line-height:1; opacity:0.35; }
+.right .num { font-family:"Libre Baskerville",serif; font-size:4.5rem; line-height:1; }
 .right p { margin-top:calc(var(--space)*1.2); font-size:0.95rem; line-height:1.55; max-width:22rem; }
 .strip {
   display:grid; grid-template-columns:repeat(4,1fr);
@@ -51,6 +61,17 @@ h1 { font-family:"Libre Baskerville",serif; font-weight:700; font-size:clamp(2.2
 .strip strong { display:block; font-family:"Libre Baskerville",serif; font-size:1rem; margin-bottom:0.35rem; }
 @media (max-width:800px){ .strip{grid-template-columns:1fr 1fr;} }
 
+
+/* contract: de-emphasis via --muted, never opacity */
+.tag, .meta, .eyebrow, .kicker, .deck, .chip, .num, .sz, .artist, .byline, .period,
+.coords, .status, .live, .chap, .hole + .num, footer, footer.contact, .addr {
+  color: var(--muted);
+}
+nav a, .nav a, .desk a, .links a, .tabs a:not(.focus):not(.keep):not(.p):not(.on),
+.topnav a, .corners nav a {
+  color: var(--muted);
+}
+nav a:hover, .nav a:hover { color: var(--fg); }
 </style>
 </head>
 <body>
@@ -78,8 +99,10 @@ h1 { font-family:"Libre Baskerville",serif; font-weight:700; font-size:clamp(2.2
   <div><strong>Boards</strong>Fiduciary clarity under pressure</div>
   <div><strong>Deals</strong>M&amp;A with disciplined narrative control</div>
   <div><strong>Governance</strong>Charters that survive actual use</div>
-  <div id="contact"><strong>Intake</strong>Partner-led, never routinized</div>
+  <div><strong>Intake</strong>Partner-led, never routinized</div>
 </section>
 
+<section id="people" aria-label="People"><h2>People</h2><p>Partners available by introduction.</p></section>
+<footer id="contact">Partner intake · contact desk</footer>
 </body>
 </html>

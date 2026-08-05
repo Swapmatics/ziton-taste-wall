@@ -6,10 +6,20 @@
 <title>Orbit Counsel — 19-signal-minimal</title>
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700&family=Exo+2:wght@400;500;600;700&display=swap" />
 <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700&family=Exo+2:wght@400;500;600;700&display=swap" rel="stylesheet" />
 <style>
 
-:root { --bg:#07090f; --fg:#e6eaf2; --mint:#6cf0c2; --u:1rem; }
+:root {
+  --bg:#07090f;
+  --fg:#e6eaf2;
+  --mint:#6cf0c2;
+  --u:1rem;
+  --muted: #a0a0a0;
+  --mute: #a0a0a0;
+}
+
+
 * { box-sizing:border-box; margin:0; padding:0; }
 body { background:var(--bg); color:var(--fg); font-family:"Exo 2",sans-serif; }
 a { color:inherit; text-decoration:none; }
@@ -18,8 +28,8 @@ a { color:inherit; text-decoration:none; }
   padding: var(--u);
   background: radial-gradient(circle at 50% 115%, color-mix(in srgb, var(--mint) 14%, transparent), transparent 42%);
 }
-.corners { display:flex; justify-content:space-between; align-items:flex-start; font-size:0.65rem; letter-spacing:0.12em; text-transform:uppercase; color:var(--mint); opacity:0.85; }
-.corners nav a { margin-left:0.9rem; color:var(--fg); opacity:0.55; }
+.corners { display:flex; justify-content:space-between; align-items:flex-start; font-size:0.65rem; letter-spacing:0.12em; text-transform:uppercase; color:var(--mint); }
+.corners nav a { margin-left:0.9rem; color:var(--fg); }
 @media (max-width:700px){ .corners nav a:not(.keep){display:none;} }
 .ring {
   width:96px; height:96px; border:1px solid color-mix(in srgb, var(--mint) 45%, transparent); border-radius:50%;
@@ -30,13 +40,13 @@ a { color:inherit; text-decoration:none; }
   top:-3px; left:50%; transform:translateX(-50%);
 }
 .mid { display:flex; flex-direction:column; justify-content:center; padding:0 4vw; }
-.tag { font-family:Orbitron,sans-serif; font-size:0.68rem; letter-spacing:0.2em; text-transform:uppercase; opacity:0.7; }
+.tag { font-family:Orbitron,sans-serif; font-size:0.68rem; letter-spacing:0.2em; text-transform:uppercase; }
 h1 {
   font-family:Orbitron,sans-serif; font-weight:500;
   font-size:clamp(1.8rem,4.5vw,3.2rem); line-height:1.15; letter-spacing:0.06em; text-transform:uppercase;
   max-width:14ch; margin-top:0.8rem;
 }
-.sub { margin-top:1rem; max-width:34rem; line-height:1.6; opacity:0.75; }
+.sub { margin-top:1rem; max-width:34rem; line-height:1.6; }
 .cta {
   margin-top:1.5rem; align-self:flex-start;
   font-family:Orbitron,sans-serif; font-size:0.65rem; letter-spacing:0.14em; text-transform:uppercase;
@@ -45,9 +55,19 @@ h1 {
 .foot {
   display:flex; justify-content:space-between; gap:1rem; flex-wrap:wrap;
   border-top:1px solid color-mix(in srgb, var(--mint) 25%, transparent);
-  padding-top:0.9rem; font-size:0.72rem; font-family:Orbitron,sans-serif; letter-spacing:0.08em; opacity:0.65;
-}
+  padding-top:0.9rem; font-size:0.72rem; font-family:Orbitron,sans-serif; letter-spacing:0.08em; }
 
+
+/* contract: de-emphasis via --muted, never opacity */
+.tag, .meta, .eyebrow, .kicker, .deck, .chip, .num, .sz, .artist, .byline, .period,
+.coords, .status, .live, .chap, .hole + .num, footer, footer.contact, .addr {
+  color: var(--muted);
+}
+nav a, .nav a, .desk a, .links a, .tabs a:not(.focus):not(.keep):not(.p):not(.on),
+.topnav a, .corners nav a {
+  color: var(--muted);
+}
+nav a:hover, .nav a:hover { color: var(--fg); }
 </style>
 </head>
 <body>
@@ -55,7 +75,7 @@ h1 {
 <div class="hud">
   <header class="corners">
     <span>Orbit Counsel</span>
-    <nav><a href="#spectrum">Spectrum</a><a href="#license">License</a><a class="keep" href="#contact">Mission</a></nav>
+    <nav aria-label="Primary"><a href="#spectrum">Spectrum</a><a href="#license">License</a><a class="keep" href="#contact">Mission</a></nav>
   </header>
   <section class="mid">
     <div class="ring" aria-hidden="true"></div>
@@ -64,9 +84,11 @@ h1 {
     <p class="sub">Spectrum, licensing, and commercial space agreements.</p>
     <a class="cta" href="#contact">Open mission counsel</a>
   </section>
-  <footer class="foot" id="contact">
-    <span id="spectrum">SPE · ALLOCATE</span>
-    <span id="license">LIC · ACTIVE</span>
+  <section id="spectrum" aria-label="Spectrum"><h2>Spectrum</h2><p>SPE · ALLOCATE</p></section>
+<section id="license" aria-label="License"><h2>License</h2><p>LIC · ACTIVE</p></section>
+<footer class="foot" id="contact">
+    <span >SPE · ALLOCATE</span>
+    <span >LIC · ACTIVE</span>
     <span>MSN · INTAKE</span>
   </footer>
 </div>

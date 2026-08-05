@@ -7,30 +7,50 @@
 <title>Scholia Partners — 42-margin-notes</title>
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;500;600;700&family=Source+Serif+4:wght@400;500;600;700&display=swap" />
 <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;500;600;700&family=Source+Serif+4:wght@400;500;600;700&display=swap" rel="stylesheet" />
 <style>
 
-:root{--bg:#f6f1e7;--fg:#1c1610;--note:#6b3a2a;--u:1.2rem}
+:root {
+  --bg:#f6f1e7;
+  --fg:#1c1610;
+  --note:#6b3a2a;
+  --u:1.2rem;
+  --muted: #666666;
+  --mute: #666666;
+}
+
+
 *{box-sizing:border-box;margin:0;padding:0}body{background:var(--bg);color:var(--fg);font-family:"Source Serif 4",serif}
 a{color:inherit;text-decoration:none}
 .nav{display:flex;justify-content:space-between;padding:1rem 1.3rem;font-size:.78rem;font-family:"EB Garamond",serif}
-.brand{font-size:1.15rem;font-weight:600}.nav a{opacity:.55}.nav a.keep{opacity:1;color:var(--note)}
+.brand{font-size:1.15rem;font-weight:600}.nav a{color:var(--note)}
 @media(max-width:700px){.nav a:not(.keep){display:none}}
 .page{display:grid;grid-template-columns:1fr 11rem;gap:1.5rem;max-width:860px;margin:0 auto;padding:2rem 1.3rem;min-height:70vh}
 @media(max-width:800px){.page{grid-template-columns:1fr}}
-.tag{font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;opacity:.5}
-h1{font-family:"EB Garamond",serif;font-size:clamp(2rem,4vw,3rem);line-height:1.2;margin-top:.5rem;max-width:16ch}
+.tag{font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;font-size:clamp(2rem,4vw,3rem);line-height:1.2;margin-top:.5rem;max-width:16ch}
 .sub{margin-top:1rem;line-height:1.7;max-width:34rem}
 .cta{display:inline-block;margin-top:1.3rem;font-size:.9rem;color:var(--note);border-bottom:1px solid color-mix(in srgb,var(--note) 45%,transparent)}
 .margin{font-size:.78rem;line-height:1.5;color:var(--note);border-left:1px solid color-mix(in srgb,var(--note) 30%,transparent);padding-left:.9rem}
 .margin p{margin-bottom:1rem}
-footer.contact{max-width:860px;margin:0 auto;padding:1rem 1.3rem 2rem;border-top:1px solid #e0d6c6;font-size:.85rem;opacity:.65}
+footer.contact{max-width:860px;margin:0 auto;padding:1rem 1.3rem 2rem;border-top:1px solid #e0d6c6;font-size:.85rem;}
 
+
+/* contract: de-emphasis via --muted, never opacity */
+.tag, .meta, .eyebrow, .kicker, .deck, .chip, .num, .sz, .artist, .byline, .period,
+.coords, .status, .live, .chap, .hole + .num, footer, footer.contact, .addr {
+  color: var(--muted);
+}
+nav a, .nav a, .desk a, .links a, .tabs a:not(.focus):not(.keep):not(.p):not(.on),
+.topnav a, .corners nav a {
+  color: var(--muted);
+}
+nav a:hover, .nav a:hover { color: var(--fg); }
 </style>
 </head>
 <body>
 
-<header class="nav"><div class="brand">Scholia Partners</div><nav><a href="#notes">Notes</a><a class="keep" href="#contact">Annotate</a></nav></header>
+<header class="nav"><div class="brand">Scholia Partners</div><nav aria-label="Primary"><a href="#notes">Notes</a><a class="keep" href="#contact">Annotate</a></nav></header>
 <section class="page">
   <div>
     <p class="tag">Appellate · Oxford / London</p>

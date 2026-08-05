@@ -6,10 +6,20 @@
 <title>Fjord Legal — 17-arctic-clinic</title>
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;500;600;700&family=Hind:wght@300;400;500;600;700&display=swap" />
 <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;500;600;700&family=Hind:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
 <style>
 
-:root { --bg:#f2f6f8; --fg:#102030; --teal:#2a7a8c; --u:1rem; }
+:root {
+  --bg:#f2f6f8;
+  --fg:#102030;
+  --teal:#2a7a8c;
+  --u:1rem;
+  --muted: #666666;
+  --mute: #666666;
+}
+
+
 * { box-sizing:border-box; margin:0; padding:0; }
 body { background:var(--bg); color:var(--fg); font-family:Hind,sans-serif; }
 a { color:inherit; text-decoration:none; }
@@ -19,7 +29,7 @@ a { color:inherit; text-decoration:none; }
 }
 .nav { grid-column:1 / -1; display:flex; justify-content:space-between; align-items:baseline; padding-bottom:0.8rem; border-bottom:1px solid color-mix(in srgb, var(--fg) 12%, transparent); }
 .brand { font-family:"Josefin Sans",sans-serif; font-weight:500; letter-spacing:0.08em; text-transform:uppercase; font-size:0.85rem; }
-.nav a { font-size:0.78rem; margin-left:1rem; opacity:0.6; }
+.nav a { font-size:0.78rem; margin-left:1rem; }
 @media (max-width:700px){ .nav a:not(.keep){display:none;} }
 .rules { grid-column:1 / 3; display:flex; flex-direction:column; gap:5px; padding-top:2rem; }
 .rules i { display:block; height:1px; background:var(--teal); }
@@ -34,7 +44,7 @@ h1 { font-family:"Josefin Sans",sans-serif; font-weight:300; font-size:clamp(2.2
   border:1px solid var(--teal); color:var(--teal);
   padding:0.45rem 0.85rem; font-size:0.78rem; letter-spacing:0.06em; text-transform:uppercase;
 }
-.side { grid-column:10 / -1; padding-top:2rem; font-size:0.82rem; line-height:1.5; opacity:0.7; }
+.side { grid-column:10 / -1; padding-top:2rem; font-size:0.82rem; line-height:1.5; }
 @media (max-width:900px){ .side{grid-column:1 / -1; padding-top:0;} }
 .phase {
   grid-column:1 / -1; display:grid; grid-template-columns:repeat(4,1fr); gap:0.75rem;
@@ -44,6 +54,17 @@ h1 { font-family:"Josefin Sans",sans-serif; font-weight:300; font-size:clamp(2.2
 .phase strong { display:block; font-family:"Josefin Sans",sans-serif; font-weight:500; font-size:0.75rem; letter-spacing:0.08em; text-transform:uppercase; color:var(--teal); margin-bottom:0.35rem; }
 @media (max-width:800px){ .phase{grid-template-columns:1fr 1fr;} }
 
+
+/* contract: de-emphasis via --muted, never opacity */
+.tag, .meta, .eyebrow, .kicker, .deck, .chip, .num, .sz, .artist, .byline, .period,
+.coords, .status, .live, .chap, .hole + .num, footer, footer.contact, .addr {
+  color: var(--muted);
+}
+nav a, .nav a, .desk a, .links a, .tabs a:not(.focus):not(.keep):not(.p):not(.on),
+.topnav a, .corners nav a {
+  color: var(--muted);
+}
+nav a:hover, .nav a:hover { color: var(--fg); }
 </style>
 </head>
 <body>
@@ -51,7 +72,7 @@ h1 { font-family:"Josefin Sans",sans-serif; font-weight:300; font-size:clamp(2.2
 <div class="sys">
   <header class="nav">
     <div class="brand">Fjord Legal</div>
-    <nav><a href="#reg">Regulatory</a><a href="#ip">IP</a><a class="keep" href="#contact">Dossier</a></nav>
+    <nav aria-label="Primary"><a href="#reg">Regulatory</a><a href="#ip">IP</a><a class="keep" href="#contact">Dossier</a></nav>
   </header>
   <div class="rules" aria-hidden="true"><i></i><i></i><i></i></div>
   <div class="copy">
@@ -65,9 +86,10 @@ h1 { font-family:"Josefin Sans",sans-serif; font-weight:300; font-size:clamp(2.2
     <div id="reg"><strong>Phase I</strong>First regulatory map</div>
     <div id="ip"><strong>Phase II</strong>IP under change</div>
     <div><strong>Phase III</strong>Commercial readiness</div>
-    <div id="contact"><strong>Intake</strong>Structured dossier</div>
+    <div><strong>Intake</strong>Structured dossier</div>
   </section>
 </div>
 
+<footer id="contact">Partner intake · contact desk</footer>
 </body>
 </html>
